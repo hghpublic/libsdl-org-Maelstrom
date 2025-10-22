@@ -1,0 +1,47 @@
+checking build system type... aarch64-unknown-linux-gnu
+checking host system type... aarch64-unknown-linux-gnu
+checking target system type... aarch64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+/workspaces/libsdl-org-Maelstrom/missing: Unknown `--is-lightweight' option
+Try `/workspaces/libsdl-org-Maelstrom/missing --help' for more information
+configure: WARNING: 'missing' script is too old or missing
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking for g++... g++
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... gcc3
+checking for ranlib... ranlib
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for SDL... yes
+checking for SDLNet_Init in -lSDL2_net... yes
+checking for RSA checksum authentication... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating netlogic/Makefile
+config.status: creating screenlib/Makefile
+config.status: creating maclib/Makefile
+config.status: creating Images/Makefile
+config.status: creating Docs/Makefile
+config.status: creating Maelstrom.spec
+config.status: executing depfiles commands

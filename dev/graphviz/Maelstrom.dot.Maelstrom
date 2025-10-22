@@ -1,0 +1,38 @@
+digraph "Maelstrom" {
+node [
+  fontsize = "12"
+];
+    "node0" [ label = "Maelstrom", shape = egg ];
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node0" -> "node1" [ style = dotted ] // Maelstrom -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node0" -> "node2" [ style = dotted ] // Maelstrom -> SDL2::SDL2main
+    "node3" [ label = "SDL2_net::SDL2_net-static", shape = octagon ];
+    "node0" -> "node3" [ style = dotted ] // Maelstrom -> SDL2_net::SDL2_net-static
+    "node4" [ label = "SDLmac", shape = octagon ];
+    "node0" -> "node4" [ style = dotted ] // Maelstrom -> SDLmac
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node4" -> "node1" [ style = dotted ] // SDLmac -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node4" -> "node2" [ style = dotted ] // SDLmac -> SDL2::SDL2main
+    "node5" [ label = "SDLscreen", shape = octagon ];
+    "node0" -> "node5" [ style = dotted ] // Maelstrom -> SDLscreen
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node5" -> "node1" [ style = dotted ] // SDLscreen -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node5" -> "node2" [ style = dotted ] // SDLscreen -> SDL2::SDL2main
+    "node6" [ label = "logic", shape = octagon ];
+    "node0" -> "node6" [ style = dotted ] // Maelstrom -> logic
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node6" -> "node1" [ style = dotted ] // logic -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node6" -> "node2" [ style = dotted ] // logic -> SDL2::SDL2main
+    "node4" [ label = "SDLmac", shape = octagon ];
+    "node6" -> "node4" [ style = dotted ] // logic -> SDLmac
+    "node7" [ label = "misc", shape = octagon ];
+    "node0" -> "node7" [ style = dotted ] // Maelstrom -> misc
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node7" -> "node1" [ style = dotted ] // misc -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node7" -> "node2" [ style = dotted ] // misc -> SDL2::SDL2main
+}

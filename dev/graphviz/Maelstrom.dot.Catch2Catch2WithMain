@@ -1,0 +1,8 @@
+digraph "Catch2::Catch2WithMain" {
+node [
+  fontsize = "12"
+];
+    "node10" [ label = "Catch2::Catch2WithMain", shape = octagon ];
+    "node9" [ label = "Catch2::Catch2", shape = octagon ];
+    "node10" -> "node9" [ style = dashed ] // Catch2::Catch2WithMain -> Catch2::Catch2
+}

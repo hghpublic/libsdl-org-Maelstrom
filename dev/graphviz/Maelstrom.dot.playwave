@@ -1,0 +1,10 @@
+digraph "playwave" {
+node [
+  fontsize = "12"
+];
+    "node10" [ label = "playwave", shape = egg ];
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node10" -> "node1" [ style = dotted ] // playwave -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node10" -> "node2" [ style = dotted ] // playwave -> SDL2::SDL2main
+}

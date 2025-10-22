@@ -1,0 +1,18 @@
+= ToDos
+:toc:
+:sectnums:
+
+== Tasks
+
+. refactor using `SDL3` with `sdl2-compat`
+. add `wasm` build target with `emscripten` for `SDL2`
+. add `wasm` build target with `emscripten` for `SDL3`
+
+== Issues
+
+. investigate input handling issues in local devcontainer
+
+== GitHub
+
+. https://github.com/libsdl-org/SDL
+. https://github.com/libsdl-org/sdl2-compat

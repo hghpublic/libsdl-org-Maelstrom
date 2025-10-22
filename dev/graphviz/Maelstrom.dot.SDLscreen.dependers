@@ -1,0 +1,12 @@
+digraph "SDLscreen" {
+node [
+  fontsize = "12"
+];
+    "node5" [ label = "SDLscreen", shape = octagon ];
+    "node0" [ label = "Maelstrom", shape = egg ];
+    "node0" -> "node5" [ style = dotted ] // Maelstrom -> SDLscreen
+    "node8" [ label = "test_game_loop_01", shape = egg ];
+    "node8" -> "node5" [ style = dotted ] // test_game_loop_01 -> SDLscreen
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node5" [ style = dotted ] // test_game_loop_02 -> SDLscreen
+}

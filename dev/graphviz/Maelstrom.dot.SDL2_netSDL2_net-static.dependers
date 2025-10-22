@@ -1,0 +1,12 @@
+digraph "SDL2_net::SDL2_net-static" {
+node [
+  fontsize = "12"
+];
+    "node3" [ label = "SDL2_net::SDL2_net-static", shape = octagon ];
+    "node0" [ label = "Maelstrom", shape = egg ];
+    "node0" -> "node3" [ style = dotted ] // Maelstrom -> SDL2_net::SDL2_net-static
+    "node8" [ label = "test_game_loop_01", shape = egg ];
+    "node8" -> "node3" [ style = dotted ] // test_game_loop_01 -> SDL2_net::SDL2_net-static
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node3" [ style = dotted ] // test_game_loop_02 -> SDL2_net::SDL2_net-static
+}
