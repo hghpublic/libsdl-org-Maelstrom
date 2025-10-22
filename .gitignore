@@ -1,0 +1,41 @@
+# macos
+.DS_Store
+
+# cmake
+build/
+
+# configure
+
+.deps/
+autom4te.cache/
+bin/
+
+*.Po
+
+config.log
+config.log
+config.status
+config.status
+configure.in~
+configure~
+
+Makefile
+
+# make
+*.o
+*.a
+
+Maelstrom
+Maelstrom-netd
+macres
+playwave
+snd2wav
+
+# autoreconf
+AUTHORS
+ChangeLog
+NEWS
+README
+COPYING
+
+configure.ac
