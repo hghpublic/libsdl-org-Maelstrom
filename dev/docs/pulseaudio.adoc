@@ -1,0 +1,108 @@
+= PulseAudio
+:toc:
+:sectnums:
+:icons: font
+
+== PulseAudio/Examples
+
+https://wiki.archlinux.org/title/PulseAudio/Examples
+
+== PulseAudio
+
+https://wiki.ubuntuusers.de/PulseAudio/
+
+== Network Setup – PulseAudio
+
+https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Network/
+
+
+== macOS
+
+=== host
+
+Start server::
+[source, zsh]
+----
+pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon
+pulseaudio --check -v
+pacmd list-sinks | grep -e 'name:' -e 'index:' -e 'card:'
+----
+
+Add environment variable `HOST_IFADDR_EN0` to `.zshrc` (adapt to shell used)::
+[source, zsh]
+----
+HOST_IFADDR_EN0=$(ipconfig getifaddr en0)
+----
+
+=== devcontainer
+
+==== config
+
+`devcontainer.json`::
+[source, json]
+----
+"remoteEnv": {
+    "PULSE_SERVER": "${localEnv:HOST_IFADDR_EN0}:4713"
+},
+"mounts": ["source=${localEnv:HOME}/.config/pulse,target=/home/vscode/.config/pulse,type=bind,consistency=cached"]
+----
+
+terminal::
+[source, zsh]
+----
+❯ pactl info
+Server String: 192.168.178.39:4713
+Library Protocol Version: 35
+Server Protocol Version: 35
+Is Local: no
+Client Index: 33
+Tile Size: 65472
+User Name: hgh
+Host Name: HGHDEVMBP2401
+Server Name: pulseaudio
+Server Version: 17.0
+Default Sample Specification: s16le 2ch 44100Hz
+Default Channel Map: front-left,front-right
+Default Sink: Channel_1__Channel_2.3
+Default Source: Front_Left
+Cookie: e2bb:103b
+
+❯ pactl list sinks | grep Name
+        Name: Channel_1__Channel_2
+        Name: Channel_1__Channel_2.2
+        Name: Channel_1__Channel_2.3
+        Name: Front_Left__Front_Right
+        Name: 1__2
+        Name: Channel_1
+
+❯ pactl info | sed -ne 's/^.*Default Sink: //p'
+Channel_1__Channel_2.3
+----
+
+
+==== test
+
+[source, zsh]
+----
+pacmd list-sinks | grep -e 'name:' -e 'index:' -e 'card:'
+
+pactl set-default-sink <index>
+
+pactl list sinks | grep Name
+
+❯ pactl info | sed -ne 's/^.*Default Sink: //p'
+Channel_1__Channel_2.3
+
+----
+
+[source, zsh]
+----
+speaker-test -c2 -twav -l7
+speaker-test -b 1024 -p 100 -l 1
+speaker-test -t sine -f 200 -b 1024 -p 100 -l 1
+----
+
+[source, zsh]
+----
+aplay -L
+----

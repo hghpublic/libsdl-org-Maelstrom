@@ -1,0 +1,8 @@
+digraph "test_misc" {
+node [
+  fontsize = "12"
+];
+    "node12" [ label = "test_misc", shape = octagon ];
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node12" [ style = dotted ] // test_game_loop_02 -> test_misc
+}

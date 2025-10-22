@@ -1,0 +1,20 @@
+= Issues
+
+----
+
+[Deprecation] The ScriptProcessorNode is deprecated. Use AudioWorkletNode instead. (https://bit.ly/audio-worklet)
+
+180399 @ 01-simple-playback.js:8538Understand this warning
+
+01-simple-playback.js:895 Looks like you are rendering without using requestAnimationFrame for the main loop. You should use 0 for the frame rate in emscripten_set_main_loop in order to use requestAnimationFrame, as that can greatly improve your frame rates!
+
+warnOnce @ 01-simple-playback.js:895Understand this error
+
+01-simple-playback.js:895 Looks like you are rendering without using requestAnimationFrame for the main loop. You should use 0 for the frame rate in emscripten_set_main_loop in 
+order to use requestAnimationFrame, as that can greatly improve your frame rates!
+
+warnOnce @ 01-simple-playback.js:895
+
+favicon.ico:1  Failed to load resource: the server responded with a status of 404 (File not found)
+
+----

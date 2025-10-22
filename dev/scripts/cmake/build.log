@@ -1,0 +1,494 @@
++ git clean -dxf
+Removing build/
++ git reset --hard HEAD
+HEAD is now at df7f90c9 Updated cmake file.
++ cmake -S . -B build -GNinja -DCMAKE_TOOLCHAIN_FILE=/usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake --graphviz=dev/graphviz/Maelstrom.dot
+-- Running vcpkg install
+Detecting compiler hash for triplet arm64-linux...
+Compiler found: /usr/bin/c++
+The following packages will be built and installed:
+    catch2:arm64-linux@3.11.0
+  * dbus[core,systemd]:arm64-linux@1.16.2#2
+  * expat:arm64-linux@2.7.3
+  * gperf:arm64-linux@3.3
+  * libcap:arm64-linux@2.73#1
+  * liblzma:arm64-linux@5.8.1
+  * libmount:arm64-linux@2.40
+  * libsystemd:arm64-linux@257.8
+  * libxcrypt:arm64-linux@4.4.38#1
+  * lz4:arm64-linux@1.10.0
+    physfs:arm64-linux@3.2.0#1
+    sdl3[core,ibus,wayland,x11]:arm64-linux@3.2.24
+  * vcpkg-cmake:arm64-linux@2024-04-23
+  * vcpkg-cmake-config:arm64-linux@2024-05-23
+  * vcpkg-cmake-get-vars:arm64-linux@2025-05-29
+  * vcpkg-make:arm64-linux@2025-09-29
+  * vcpkg-tool-meson:arm64-linux@1.9.0#2
+  * zstd:arm64-linux@1.5.7
+Additional packages (*) will be modified to complete this operation.
+Restored 3 package(s) from /home/vscode/.cache/vcpkg/archives in 147 ms. Use --debug to see more details.
+Installing 1/18 vcpkg-cmake-config:arm64-linux@2024-05-23...
+Elapsed time to handle vcpkg-cmake-config:arm64-linux: 3.56 ms
+vcpkg-cmake-config:arm64-linux package ABI: dc6ff5a94f7f39c412aa7f4e68f6359ddc8f96c8fec7941dbbe7a96116492d16
+Installing 2/18 vcpkg-cmake:arm64-linux@2024-04-23...
+Elapsed time to handle vcpkg-cmake:arm64-linux: 4.92 ms
+vcpkg-cmake:arm64-linux package ABI: d20b826b6f22844a686be91070e365504fbf669863c82010d654f4755e2cb2da
+Installing 3/18 catch2:arm64-linux@3.11.0...
+Elapsed time to handle catch2:arm64-linux: 100 ms
+catch2:arm64-linux package ABI: 54dbd17230a85ab26a573fe76e7a6a9e75cff69e90b5df128d2769e72ed99faa
+Installing 4/18 physfs:arm64-linux@3.2.0#1...
+Building physfs:arm64-linux@3.2.0#1...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+Downloading https://github.com/icculus/physfs/archive/release-3.2.0.tar.gz -> icculus-physfs-release-3.2.0.tar.gz
+Successfully downloaded icculus-physfs-release-3.2.0.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/icculus-physfs-release-3.2.0.tar.gz
+-- Using source at /usr/local/vcpkg/buildtrees/physfs/src/ease-3.2.0-f300eac03a.clean
+-- Configuring arm64-linux
+-- Building arm64-linux-dbg
+-- Building arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/physfs_arm64-linux/lib/pkgconfig/physfs.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/physfs_arm64-linux/debug/lib/pkgconfig/physfs.pc
+-- Installing: /usr/local/vcpkg/packages/physfs_arm64-linux/share/physfs/vcpkg-cmake-wrapper.cmake
+-- Installing: /usr/local/vcpkg/packages/physfs_arm64-linux/share/physfs/usage
+-- Installing: /usr/local/vcpkg/packages/physfs_arm64-linux/share/physfs/copyright
+-- Performing post-build validation
+Starting submission of physfs:arm64-linux@3.2.0#1 to 1 binary cache(s) in the background
+Elapsed time to handle physfs:arm64-linux: 2.1 s
+physfs:arm64-linux package ABI: d56f5c50e4a03c251a0acc5a9e18ef7acd5364e88cbf7e4d70c3500ab5f2fbbd
+Installing 5/18 zstd:arm64-linux@1.5.7...
+Building zstd:arm64-linux@1.5.7...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+Downloading https://github.com/facebook/zstd/archive/v1.5.7.tar.gz -> facebook-zstd-v1.5.7.tar.gz
+Successfully downloaded facebook-zstd-v1.5.7.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/facebook-zstd-v1.5.7.tar.gz
+-- Applying patch no-static-suffix.patch
+-- Applying patch fix-emscripten-and-clang-cl.patch
+-- Applying patch fix-windows-rc-compile.patch
+-- Using source at /usr/local/vcpkg/buildtrees/zstd/src/v1.5.7-bb6cae2b2e.clean
+-- Configuring arm64-linux
+-- Building arm64-linux-dbg
+-- Building arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/zstd_arm64-linux/lib/pkgconfig/libzstd.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/zstd_arm64-linux/debug/lib/pkgconfig/libzstd.pc
+-- Installing: /usr/local/vcpkg/packages/zstd_arm64-linux/share/zstd/usage
+-- Performing post-build validation
+Starting submission of zstd:arm64-linux@1.5.7 to 1 binary cache(s) in the background
+Elapsed time to handle zstd:arm64-linux: 6.7 s
+zstd:arm64-linux package ABI: eddab6ab7b4d01f8c7afdf7598417904be00708b911202e723d39f46290f5b26
+Completed submission of physfs:arm64-linux@3.2.0#1 to 1 binary cache(s) in 36.1 ms
+Installing 6/18 vcpkg-cmake-get-vars:arm64-linux@2025-05-29...
+Building vcpkg-cmake-get-vars:arm64-linux@2025-05-29...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Installing: /usr/local/vcpkg/packages/vcpkg-cmake-get-vars_arm64-linux/share/vcpkg-cmake-get-vars/vcpkg_cmake_get_vars.cmake
+-- Installing: /usr/local/vcpkg/packages/vcpkg-cmake-get-vars_arm64-linux/share/vcpkg-cmake-get-vars/cmake_get_vars
+-- Installing: /usr/local/vcpkg/packages/vcpkg-cmake-get-vars_arm64-linux/share/vcpkg-cmake-get-vars/cmake_get_vars/CMakeLists.txt
+-- Installing: /usr/local/vcpkg/packages/vcpkg-cmake-get-vars_arm64-linux/share/vcpkg-cmake-get-vars/cmake-get-vars.cmake.in
+-- Installing: /usr/local/vcpkg/packages/vcpkg-cmake-get-vars_arm64-linux/share/vcpkg-cmake-get-vars/vcpkg-port-config.cmake
+-- Installing: /usr/local/vcpkg/packages/vcpkg-cmake-get-vars_arm64-linux/share/vcpkg-cmake-get-vars/copyright
+-- Performing post-build validation
+Starting submission of vcpkg-cmake-get-vars:arm64-linux@2025-05-29 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-cmake-get-vars:arm64-linux: 13.5 ms
+vcpkg-cmake-get-vars:arm64-linux package ABI: 8d75217f28f0b29f4c90ecffe46d9c85f5c813bd981c84486c70cb4e6d57c305
+Installing 7/18 vcpkg-tool-meson:arm64-linux@1.9.0#2...
+Building vcpkg-tool-meson:arm64-linux@1.9.0#2...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Installing: /usr/local/vcpkg/packages/vcpkg-tool-meson_arm64-linux/share/vcpkg-tool-meson/copyright
+Downloading https://github.com/mesonbuild/meson/archive/1.9.0.tar.gz -> meson-1.9.0.tar.gz
+Successfully downloaded meson-1.9.0.tar.gz
+-- Applying patch /usr/local/vcpkg/packages/vcpkg-tool-meson_arm64-linux/share/vcpkg-tool-meson/meson-intl.patch
+-- Applying patch /usr/local/vcpkg/packages/vcpkg-tool-meson_arm64-linux/share/vcpkg-tool-meson/adjust-python-dep.patch
+-- Applying patch /usr/local/vcpkg/packages/vcpkg-tool-meson_arm64-linux/share/vcpkg-tool-meson/adjust-args.patch
+-- Applying patch /usr/local/vcpkg/packages/vcpkg-tool-meson_arm64-linux/share/vcpkg-tool-meson/remove-pkgconfig-specialization.patch
+-- Applying patch /usr/local/vcpkg/packages/vcpkg-tool-meson_arm64-linux/share/vcpkg-tool-meson/meson-56879d5.diff
+-- Found Python version '3.12.3 at /usr/bin/python3'
+-- Using meson: /usr/local/vcpkg-downloads/tools/meson-1.9.0-9efb42/meson.py
+-- Performing post-build validation
+Starting submission of vcpkg-tool-meson:arm64-linux@1.9.0#2 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-tool-meson:arm64-linux: 1.4 s
+vcpkg-tool-meson:arm64-linux package ABI: 28786c8b61935f79119ec9913c8f749ea0a2ddb971e966b25eca0734de70fbdb
+Completed submission of zstd:arm64-linux@1.5.7 to 1 binary cache(s) in 155 ms
+Completed submission of vcpkg-cmake-get-vars:arm64-linux@2025-05-29 to 1 binary cache(s) in 1.17 ms
+Installing 8/18 lz4:arm64-linux@1.10.0...
+Building lz4:arm64-linux@1.10.0...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+Downloading https://github.com/lz4/lz4/archive/v1.10.0.tar.gz -> lz4-lz4-v1.10.0.tar.gz
+Successfully downloaded lz4-lz4-v1.10.0.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/lz4-lz4-v1.10.0.tar.gz
+-- Applying patch target-lz4-lz4.diff
+-- Using source at /usr/local/vcpkg/buildtrees/lz4/src/v1.10.0-61bd08d80e.clean
+-- Configuring arm64-linux
+-- Building arm64-linux-dbg
+-- Building arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/lz4_arm64-linux/lib/pkgconfig/liblz4.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/lz4_arm64-linux/debug/lib/pkgconfig/liblz4.pc
+-- Installing: /usr/local/vcpkg/packages/lz4_arm64-linux/share/lz4/usage
+-- Installing: /usr/local/vcpkg/packages/lz4_arm64-linux/share/lz4/copyright
+-- Performing post-build validation
+Starting submission of lz4:arm64-linux@1.10.0 to 1 binary cache(s) in the background
+Elapsed time to handle lz4:arm64-linux: 3.3 s
+lz4:arm64-linux package ABI: 068841456ffa4933f25d0249f9da37e38745b1533e97c7065dee5394854bf82b
+Completed submission of vcpkg-tool-meson:arm64-linux@1.9.0#2 to 1 binary cache(s) in 1.64 ms
+Installing 9/18 vcpkg-make:arm64-linux@2025-09-29...
+Building vcpkg-make:arm64-linux@2025-09-29...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+Downloading automake-1.17.tar.gz, trying https://ftpmirror.gnu.org/gnu/automake/automake-1.17.tar.gz
+Successfully downloaded automake-1.17.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/automake-1.17.tar.gz
+-- Using source at /usr/local/vcpkg/buildtrees/vcpkg-make/src/automake-1-c362683103.clean
+-- Getting CMake variables for arm64-linux
+-- Loading CMake variables from /usr/local/vcpkg/buildtrees/vcpkg-make/cmake-get-vars_C_CXX-arm64-linux.cmake.log
+-- arm64-linux autotools triplet: aarch64-unknown-linux-gnu (from config.guess)
+-- Performing post-build validation
+Starting submission of vcpkg-make:arm64-linux@2025-09-29 to 1 binary cache(s) in the background
+Elapsed time to handle vcpkg-make:arm64-linux: 1.9 s
+vcpkg-make:arm64-linux package ABI: 5a1cb471dd2e39749458ef02a243efbb1eb1b2e0938b2cc685a8cd5111fe77d7
+Completed submission of lz4:arm64-linux@1.10.0 to 1 binary cache(s) in 35.2 ms
+Installing 10/18 libxcrypt:arm64-linux@4.4.38#1...
+Building libxcrypt:arm64-linux@4.4.38#1...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- libxcrypt requires libltdl-dev from the system package manager (example: "sudo apt install libltdl-dev")
+Downloading https://github.com/besser82/libxcrypt/archive/v4.4.38.tar.gz -> besser82-libxcrypt-v4.4.38.tar.gz
+Successfully downloaded besser82-libxcrypt-v4.4.38.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/besser82-libxcrypt-v4.4.38.tar.gz
+-- Using source at /usr/local/vcpkg/buildtrees/libxcrypt/src/v4.4.38-9da89a5066.clean
+-- Getting CMake variables for arm64-linux
+-- Loading CMake variables from /usr/local/vcpkg/buildtrees/libxcrypt/cmake-get-vars_C_CXX-arm64-linux.cmake.log
+-- Generating configure for arm64-linux
+-- Finished generating configure for arm64-linux
+-- Configuring arm64-linux-dbg
+-- Configuring arm64-linux-rel
+-- Building/Installing arm64-linux-dbg
+-- Making target 'all' for arm64-linux-dbg
+-- Making target 'install' for arm64-linux-dbg
+-- Building/Installing arm64-linux-rel
+-- Making target 'all' for arm64-linux-rel
+-- Making target 'install' for arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libxcrypt_arm64-linux/lib/pkgconfig/libcrypt.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libxcrypt_arm64-linux/lib/pkgconfig/libxcrypt.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libxcrypt_arm64-linux/debug/lib/pkgconfig/libcrypt.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libxcrypt_arm64-linux/debug/lib/pkgconfig/libxcrypt.pc
+-- Performing post-build validation
+Starting submission of libxcrypt:arm64-linux@4.4.38#1 to 1 binary cache(s) in the background
+Elapsed time to handle libxcrypt:arm64-linux: 11 s
+libxcrypt:arm64-linux package ABI: da02ad489d2abf2d050f535140a68a16a6542f38a40df92dae8c458190a0b526
+Completed submission of vcpkg-make:arm64-linux@2025-09-29 to 1 binary cache(s) in 2.72 ms
+Installing 11/18 libmount:arm64-linux@2.40...
+Building libmount:arm64-linux@2.40...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+Downloading https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.40/util-linux-2.40.tar.xz -> util-linux-2.40.tar.xz
+Successfully downloaded util-linux-2.40.tar.xz
+-- Extracting source /usr/local/vcpkg-downloads/util-linux-2.40.tar.xz
+-- Applying patch hide-private-symbols.diff
+-- Using source at /usr/local/vcpkg/buildtrees/libmount/src/2.40-b5c733b07e.clean
+-- Getting CMake variables for arm64-linux-dbg
+-- Getting CMake variables for arm64-linux-rel
+-- Generating configure for arm64-linux
+-- Finished generating configure for arm64-linux
+-- Configuring arm64-linux-dbg
+-- Configuring arm64-linux-rel
+-- Building arm64-linux-dbg
+-- Installing arm64-linux-dbg
+-- Building arm64-linux-rel
+-- Installing arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libmount_arm64-linux/lib/pkgconfig/blkid.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libmount_arm64-linux/lib/pkgconfig/mount.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libmount_arm64-linux/debug/lib/pkgconfig/blkid.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libmount_arm64-linux/debug/lib/pkgconfig/mount.pc
+-- Performing post-build validation
+Starting submission of libmount:arm64-linux@2.40 to 1 binary cache(s) in the background
+Elapsed time to handle libmount:arm64-linux: 31 s
+libmount:arm64-linux package ABI: c93eb63293aab71f0eb9200e754c800a47bdd6c7725c1cd919b1074c8c73582c
+Completed submission of libxcrypt:arm64-linux@4.4.38#1 to 1 binary cache(s) in 24.1 ms
+Installing 12/18 liblzma:arm64-linux@5.8.1...
+Building liblzma:arm64-linux@5.8.1...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+Downloading https://github.com/tukaani-project/xz/archive/v5.8.1.tar.gz -> tukaani-project-xz-v5.8.1.tar.gz
+Successfully downloaded tukaani-project-xz-v5.8.1.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/tukaani-project-xz-v5.8.1.tar.gz
+-- Applying patch build-tools.patch
+-- Using source at /usr/local/vcpkg/buildtrees/liblzma/src/v5.8.1-7ed4ee158b.clean
+-- Configuring arm64-linux
+-- Building arm64-linux-dbg
+-- Building arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/liblzma_arm64-linux/lib/pkgconfig/liblzma.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/liblzma_arm64-linux/debug/lib/pkgconfig/liblzma.pc
+-- Installing: /usr/local/vcpkg/packages/liblzma_arm64-linux/share/liblzma/copyright
+-- Performing post-build validation
+Starting submission of liblzma:arm64-linux@5.8.1 to 1 binary cache(s) in the background
+Elapsed time to handle liblzma:arm64-linux: 3.2 s
+liblzma:arm64-linux package ABI: 9406fabfebeee9547f3598dc06e2222ec52def587d6d5b55400c413892b01053
+Completed submission of libmount:arm64-linux@2.40 to 1 binary cache(s) in 184 ms
+Installing 13/18 libcap:arm64-linux@2.73#1...
+Building libcap:arm64-linux@2.73#1...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+Downloading libcap-2.73.tar.xz, trying https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.73.tar.xz
+Successfully downloaded libcap-2.73.tar.xz
+-- Extracting source /usr/local/vcpkg-downloads/libcap-2.73.tar.xz
+-- Using source at /usr/local/vcpkg/buildtrees/libcap/src/libcap-2-2049950211.clean
+-- Getting CMake variables for arm64-linux
+-- Loading CMake variables from /usr/local/vcpkg/buildtrees/libcap/cmake-get-vars_C_CXX-arm64-linux.cmake.log
+-- Configuring arm64-linux-dbg
+-- Configuring arm64-linux-rel
+-- Building/Installing arm64-linux-dbg
+-- Making target 'all' for arm64-linux-dbg
+-- Making target 'install' for arm64-linux-dbg
+-- Building/Installing arm64-linux-rel
+-- Making target 'all' for arm64-linux-rel
+-- Making target 'install' for arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libcap_arm64-linux/lib/pkgconfig/libcap.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libcap_arm64-linux/lib/pkgconfig/libpsx.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libcap_arm64-linux/debug/lib/pkgconfig/libcap.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libcap_arm64-linux/debug/lib/pkgconfig/libpsx.pc
+-- Installing: /usr/local/vcpkg/packages/libcap_arm64-linux/share/libcap/copyright
+-- Performing post-build validation
+Starting submission of libcap:arm64-linux@2.73#1 to 1 binary cache(s) in the background
+Elapsed time to handle libcap:arm64-linux: 1.2 s
+libcap:arm64-linux package ABI: 683c1b11ff9a0436efd5ae1a329c5419182c0a960cb96ebeba8b54f45a2c4877
+Completed submission of liblzma:arm64-linux@5.8.1 to 1 binary cache(s) in 59.7 ms
+Installing 14/18 gperf:arm64-linux@3.3...
+Building gperf:arm64-linux@3.3...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+Downloading gperf-3.3.tar.gz, trying https://ftpmirror.gnu.org/gnu/gperf/gperf-3.3.tar.gz
+Successfully downloaded gperf-3.3.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/gperf-3.3.tar.gz
+-- Using source at /usr/local/vcpkg/buildtrees/gperf/src/gperf-3-b814f52c10.clean
+-- Getting CMake variables for arm64-linux
+-- Loading CMake variables from /usr/local/vcpkg/buildtrees/gperf/cmake-get-vars_C_CXX-arm64-linux.cmake.log
+-- Generating configure for arm64-linux
+-- Finished generating configure for arm64-linux
+-- Configuring arm64-linux-rel
+-- Building/Installing arm64-linux-rel
+-- Making target 'all' for arm64-linux-rel
+-- Making target 'install' for arm64-linux-rel
+-- Installing: /usr/local/vcpkg/packages/gperf_arm64-linux/share/gperf/copyright
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/gperf_arm64-linux/tools/gperf/gperf' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Performing post-build validation
+Starting submission of gperf:arm64-linux@3.3 to 1 binary cache(s) in the background
+Elapsed time to handle gperf:arm64-linux: 14 s
+gperf:arm64-linux package ABI: f3b88fbde151551385c6e9b8030c04b4a95491e7cdb5a24ac4d89d4f4ae96710
+Completed submission of libcap:arm64-linux@2.73#1 to 1 binary cache(s) in 9.77 ms
+Installing 15/18 libsystemd:arm64-linux@257.8...
+Building libsystemd:arm64-linux@257.8...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Found Python version '3.12.3 at /usr/bin/python3'
+-- Using meson: /usr/local/vcpkg-downloads/tools/meson-1.9.0-9efb42/meson.py
+Downloading https://github.com/systemd/systemd/archive/v257.8.tar.gz -> systemd-systemd-v257.8.tar.gz
+Successfully downloaded systemd-systemd-v257.8.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/systemd-systemd-v257.8.tar.gz
+-- Applying patch disable-warning-nonnull.patch
+-- Applying patch only-libsystemd.patch
+-- Applying patch pkgconfig.patch
+-- Using source at /usr/local/vcpkg/buildtrees/libsystemd/src/v257.8-231b365f90.clean
+-- Configuring arm64-linux-dbg
+-- Getting CMake variables for arm64-linux
+-- Loading CMake variables from /usr/local/vcpkg/buildtrees/libsystemd/cmake-get-vars_C_CXX-arm64-linux.cmake.log
+-- Configuring arm64-linux-dbg done
+-- Configuring arm64-linux-rel
+-- Configuring arm64-linux-rel done
+-- Package arm64-linux-dbg
+-- Package arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libsystemd_arm64-linux/lib/pkgconfig/libsystemd.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/libsystemd_arm64-linux/debug/lib/pkgconfig/libsystemd.pc
+-- Performing post-build validation
+Starting submission of libsystemd:arm64-linux@257.8 to 1 binary cache(s) in the background
+Elapsed time to handle libsystemd:arm64-linux: 15 s
+libsystemd:arm64-linux package ABI: eb5dfa968b8c4c84fac580d41260e094c6e9f86e9d6b1ad004ae456ec7b8abdc
+Completed submission of gperf:arm64-linux@3.3 to 1 binary cache(s) in 10.6 ms
+Installing 16/18 expat:arm64-linux@2.7.3...
+Building expat:arm64-linux@2.7.3...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+Downloading https://github.com/libexpat/libexpat/archive/R_2_7_3.tar.gz -> libexpat-libexpat-R_2_7_3.tar.gz
+Successfully downloaded libexpat-libexpat-R_2_7_3.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/libexpat-libexpat-R_2_7_3.tar.gz
+-- Using source at /usr/local/vcpkg/buildtrees/expat/src/R_2_7_3-c331528ffe.clean
+-- Configuring arm64-linux
+-- Building arm64-linux-dbg
+-- Building arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/expat_arm64-linux/lib/pkgconfig/expat.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/expat_arm64-linux/debug/lib/pkgconfig/expat.pc
+-- Installing: /usr/local/vcpkg/packages/expat_arm64-linux/share/expat/copyright
+-- Performing post-build validation
+Starting submission of expat:arm64-linux@2.7.3 to 1 binary cache(s) in the background
+Elapsed time to handle expat:arm64-linux: 4.6 s
+expat:arm64-linux package ABI: 84a5cc641badb17f15a109ac2602d78a530629e189c86f58093a7a05ae976fe6
+Completed submission of libsystemd:arm64-linux@257.8 to 1 binary cache(s) in 391 ms
+Installing 17/18 dbus[core,systemd]:arm64-linux@1.16.2#2...
+Building dbus[core,systemd]:arm64-linux@1.16.2#2...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+-- Note: dbus only supports dynamic library linkage. Building dynamic library.
+Downloading https://gitlab.freedesktop.org//dbus/dbus/-/archive/dbus-1.16.2/dbus-dbus-1.16.2.tar.gz -> dbus-dbus-dbus-1.16.2.tar.gz
+Successfully downloaded dbus-dbus-dbus-1.16.2.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/dbus-dbus-dbus-1.16.2.tar.gz
+-- Applying patch cmake.dep.patch
+-- Applying patch pkgconfig.patch
+-- Applying patch getpeereid.patch
+-- Applying patch libsystemd.patch
+-- Applying patch remove-path.patch
+-- Applying patch remove-var-lib-dbus-creation.patch
+-- Using source at /usr/local/vcpkg/buildtrees/dbus/src/bus-1.16.2-02a7b61930.clean
+-- Configuring arm64-linux
+-- Building arm64-linux-dbg
+-- Building arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/dbus_arm64-linux/lib/pkgconfig/dbus-1.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/dbus_arm64-linux/debug/lib/pkgconfig/dbus-1.pc
+-- Installing: /usr/local/vcpkg/packages/dbus_arm64-linux/share/dbus/copyright
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/lib/libdbus-1.so.3.38.3' (From '' -> To '$ORIGIN')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/libexec/dbus-daemon-launch-helper' (From '' -> To '$ORIGIN:$ORIGIN/../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-cleanup-sockets' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-daemon' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-launch' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-monitor' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-run-session' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-send' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-test-tool' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-update-activation-environment' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/debug/tools/dbus/dbus-uuidgen' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/lib/libdbus-1.so.3.38.3' (From '' -> To '$ORIGIN')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/libexec/dbus-daemon-launch-helper' (From '' -> To '$ORIGIN:$ORIGIN/../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-cleanup-sockets' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-daemon' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-launch' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-monitor' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-run-session' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-send' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-test-tool' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-update-activation-environment' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/usr/local/vcpkg/packages/dbus_arm64-linux/tools/dbus/dbus-uuidgen' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Performing post-build validation
+Starting submission of dbus[core,systemd]:arm64-linux@1.16.2#2 to 1 binary cache(s) in the background
+Elapsed time to handle dbus:arm64-linux: 9.9 s
+dbus:arm64-linux package ABI: aa1de4b936676cc50606a471d5a6cacc79e392fc28b7d086637cfd4dea9634d8
+Completed submission of expat:arm64-linux@2.7.3 to 1 binary cache(s) in 23.2 ms
+Installing 18/18 sdl3[core,ibus,wayland,x11]:arm64-linux@3.2.24...
+Building sdl3[core,ibus,wayland,x11]:arm64-linux@3.2.24...
+/usr/local/vcpkg/triplets/community/arm64-linux.cmake: info: loaded community triplet from here. Community triplets are not built in the curated registry and are thus less likely to succeed.
+Downloading https://github.com/libsdl-org/SDL/archive/release-3.2.24.tar.gz -> libsdl-org-SDL-release-3.2.24.tar.gz
+Successfully downloaded libsdl-org-SDL-release-3.2.24.tar.gz
+-- Extracting source /usr/local/vcpkg-downloads/libsdl-org-SDL-release-3.2.24.tar.gz
+-- Using source at /usr/local/vcpkg/buildtrees/sdl3/src/ase-3.2.24-170c153911.clean
+CMake Warning at ports/sdl3/portfile.cmake:23 (message):
+  You will need to install Xorg dependencies to use feature x11:
+
+  sudo apt install libx11-dev libxft-dev libxext-dev
+
+Call Stack (most recent call first):
+  scripts/ports.cmake:206 (include)
+
+
+CMake Warning at ports/sdl3/portfile.cmake:26 (message):
+  You will need to install Wayland dependencies to use feature wayland:
+
+  sudo apt install libwayland-dev libxkbcommon-dev libegl1-mesa-dev
+
+Call Stack (most recent call first):
+  scripts/ports.cmake:206 (include)
+
+
+CMake Warning at ports/sdl3/portfile.cmake:29 (message):
+  You will need to install ibus dependencies to use feature ibus:
+
+  sudo apt install libibus-1.0-dev
+
+Call Stack (most recent call first):
+  scripts/ports.cmake:206 (include)
+
+
+-- Configuring arm64-linux
+CMake Warning at /workspaces/libsdl-org-Maelstrom/build/vcpkg_installed/arm64-linux/share/vcpkg-cmake/vcpkg_cmake_configure.cmake:344 (message):
+  The following variables are not used in CMakeLists.txt:
+
+      SDL_UNIX_CONSOLE_BUILD
+
+  Please recheck them and remove the unnecessary options from the
+  `vcpkg_cmake_configure` call.
+
+  If these options should still be passed for whatever reason, please use the
+  `MAYBE_UNUSED_VARIABLES` argument.
+Call Stack (most recent call first):
+  ports/sdl3/portfile.cmake:37 (vcpkg_cmake_configure)
+  scripts/ports.cmake:206 (include)
+
+
+-- Building arm64-linux-dbg
+-- Building arm64-linux-rel
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/sdl3_arm64-linux/lib/pkgconfig/sdl3.pc
+-- Fixing pkgconfig file: /usr/local/vcpkg/packages/sdl3_arm64-linux/debug/lib/pkgconfig/sdl3.pc
+-- Installing: /usr/local/vcpkg/packages/sdl3_arm64-linux/share/sdl3/usage
+-- Performing post-build validation
+Starting submission of sdl3[core,ibus,wayland,x11]:arm64-linux@3.2.24 to 1 binary cache(s) in the background
+Elapsed time to handle sdl3:arm64-linux: 19 s
+sdl3:arm64-linux package ABI: 4e0e8e6d91ff2b96c2a6b1137a74f56830e93f08ef2e843ca24811d7b906b7b7
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
+Packages installed in this vcpkg installation declare the following licenses:
+(AFL-2.1 OR GPL-2.0-or-later)
+(BSD-3-Clause OR GPL-2.0-only)
+Apache-2.0
+BSD-2-Clause
+BSL-1.0
+GPL-3.0-or-later
+MIT
+Zlib
+catch2 provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(Catch2 CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE Catch2::Catch2 Catch2::Catch2WithMain)
+
+catch2 provides pkg-config modules:
+
+  # A modern, C++-native test framework for C++14 and above (links in default main)
+  catch2-with-main
+
+  # A modern, C++-native, test framework for C++14 and above
+  catch2
+
+physfs provides CMake targets:
+
+    find_package(PhysFS CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE $<IF:$<TARGET_EXISTS:PhysFS::PhysFS>,PhysFS::PhysFS,PhysFS::PhysFS-static>)
+
+physfs is compatible with built-in CMake targets:
+
+    find_package(PhysFS REQUIRED)
+    target_include_directories(main PRIVATE ${PHYSFS_INCLUDE_DIR})
+    target_link_libraries(main PRIVATE ${PHYSFS_LIBRARY})
+
+sdl3 provides CMake targets:
+
+  find_package(SDL3 CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE SDL3::SDL3)
+
+Completed submission of dbus[core,systemd]:arm64-linux@1.16.2#2 to 1 binary cache(s) in 434 ms
+Waiting for 1 remaining binary cache submissions...
+Completed submission of sdl3[core,ibus,wayland,x11]:arm64-linux@3.2.24 to 1 binary cache(s) in 747 ms (1/1)
+All requested installations completed successfully in: 2.1 min
+-- Running vcpkg install - done
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at CMakeLists.txt:41 (add_subdirectory):
+  The source directory
+
+    /workspaces/libsdl-org-Maelstrom/external/SDL_net
+
+  does not contain a CMakeLists.txt file.
+
+
+CMake Error at CMakeLists.txt:44 (SDL_DetectTargetCPUArchitectures):
+  Unknown CMake command "SDL_DetectTargetCPUArchitectures".
+
+
+-- Configuring incomplete, errors occurred!
+
+libsdl-org-Maelstrom on  dev/4.0 [$] via △ v4.2.1 took 2m5s 
+⬢ [Docker] ❯ 

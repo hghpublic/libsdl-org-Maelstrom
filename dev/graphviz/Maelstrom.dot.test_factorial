@@ -1,0 +1,12 @@
+digraph "test_factorial" {
+node [
+  fontsize = "12"
+];
+    "node12" [ label = "test_factorial", shape = egg ];
+    "node13" [ label = "Catch2::Catch2", shape = octagon ];
+    "node12" -> "node13" [ style = dotted ] // test_factorial -> Catch2::Catch2
+    "node14" [ label = "Catch2::Catch2WithMain", shape = octagon ];
+    "node12" -> "node14" [ style = dotted ] // test_factorial -> Catch2::Catch2WithMain
+    "node13" [ label = "Catch2::Catch2", shape = octagon ];
+    "node14" -> "node13" [ style = dashed ] // Catch2::Catch2WithMain -> Catch2::Catch2
+}

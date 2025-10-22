@@ -1,0 +1,17 @@
+= devcontainer
+
+== Environment variables
+
+https://code.visualstudio.com/remote/advancedcontainers/environment-variables
+
+
+== Develop on a remote Docker host
+
+https://code.visualstudio.com/remote/advancedcontainers/develop-remote-host
+
+
+== Stash
+
+=== Specification
+
+https://containers.dev/implementors/json_reference/

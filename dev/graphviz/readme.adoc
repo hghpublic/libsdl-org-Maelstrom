@@ -1,0 +1,41 @@
+= Graphviz
+:toc:
+:sectnums:
+:icons: font
+:source-highlighter: highlight.js
+
+== Graphviz
+
+https://cmake.org/cmake/help/latest/manual/cmake.1.html#cmdoption-cmake-graphviz
+
+[source, shell]
+----
+dot -Tpng -o foo.png foo.dot
+
+dot -Tpng -o Maelstrom.png Maelstrom.dot
+----
+
+== CppDepend
+
+https://www.cppdepend.com/
+
+== Cscope
+
+https://cscope.sourceforge.net/
+
+
+== Callgrind
+
+https://valgrind.org/docs/manual/cl-manual.html
+
+https://kcachegrind.github.io/html/Introduction.html
+
+== Cytoscape.js
+
+https://js.cytoscape.org/
+
+== Codeviz
+
+https://www.codeviz.ai/
+
+https://marketplace.visualstudio.com/items?itemName=CodeViz.codeviz

@@ -1,0 +1,16 @@
+= cmake
+
+https://github.com/hghpublic/libsdl-org-Maelstrom
+
+== deps
+
+. https://github.com/libsdl-org/SDL
+. https://github.com/libsdl-org/SDL_net
+. https://github.com/slouken/SteamworksSDK
+. https://github.com/icculus/physfs
+
+== macres
+
+----
+macres --export [file] [output_directory]
+----

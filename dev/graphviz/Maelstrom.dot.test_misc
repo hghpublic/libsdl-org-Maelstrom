@@ -1,0 +1,10 @@
+digraph "test_misc" {
+node [
+  fontsize = "12"
+];
+    "node12" [ label = "test_misc", shape = octagon ];
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node12" -> "node1" [ style = dotted ] // test_misc -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node12" -> "node2" [ style = dotted ] // test_misc -> SDL2::SDL2main
+}

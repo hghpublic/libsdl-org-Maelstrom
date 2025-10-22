@@ -1,0 +1,10 @@
+# macos
+.DS_Store
+
+# empcripten
+*.html
+*.js
+*.wasm
+
+# cmake
+build/

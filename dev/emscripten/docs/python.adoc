@@ -1,0 +1,66 @@
+= python
+:toc:
+:sectnums:
+:experimental:
+
+http.server — HTTP servers
+
+https://docs.python.org/3/library/http.server.html
+
+
+== Open ports
+
+----
+ss -tulpen | grep -vEe "\s+127[.]|::1"
+
+netstat -ntlp
+----
+
+== Stash
+
+One-Line Python HTTP Server: Quick Start Guide
+
+https://betterstack.com/community/guides/scaling-python/python-http-server/
+
+How to Create a Simple HTTP Server in Python
+
+
+https://www.digitalocean.com/community/tutorials/python-simplehttpserver-http-server
+
+
+Creating a Python Web Server: From Basic to Advanced
+
+https://pydjango-tutorial.medium.com/creating-a-python-web-server-from-basic-to-advanced-449fcb38e93b
+
+How to Launch an HTTP Server in One Line of Python Code
+
+https://realpython.com/python-http-server/
+
+
+How do I setup a local HTTP server using Python
+
+https://stackoverflow.com/questions/27977972/how-do-i-setup-a-local-http-server-using-python
+
+https://github.com/alexandreday/local_server/blob/master/custom_server.py
+
+
+How do you set up a local testing server?
+
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
+
+How to hard refresh your browser and clear your cache
+
+https://fabricdigital.co.nz/blog/how-to-hard-refresh-your-browser-and-clear-cache
+
+How to hard refresh browser and clear cache if you're using Chrome.
+
+Chrome and Windows::
+
+. Hold down kbd:[Ctrl] and click the kbd:[🔄] Reload button.
+. Or Hold down kbd:[Ctrl] and press kbd:[F5].
+
+
+Chrome and Mac::
+
+. Hold down kbd:[Shift] and click the kbd:[🔄] Reload button.
+. Or Hold down kbd:[Command], kbd:[Shift] and click the kbd:[R] key.

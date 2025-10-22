@@ -1,0 +1,8 @@
+digraph "Catch2::Catch2" {
+node [
+  fontsize = "12"
+];
+    "node9" [ label = "Catch2::Catch2", shape = octagon ];
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node9" [ style = dotted ] // test_game_loop_02 -> Catch2::Catch2
+}

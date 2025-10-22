@@ -1,0 +1,12 @@
+digraph "test_vector" {
+node [
+  fontsize = "12"
+];
+    "node16" [ label = "test_vector", shape = egg ];
+    "node13" [ label = "Catch2::Catch2", shape = octagon ];
+    "node16" -> "node13" [ style = dotted ] // test_vector -> Catch2::Catch2
+    "node14" [ label = "Catch2::Catch2WithMain", shape = octagon ];
+    "node16" -> "node14" [ style = dotted ] // test_vector -> Catch2::Catch2WithMain
+    "node13" [ label = "Catch2::Catch2", shape = octagon ];
+    "node14" -> "node13" [ style = dashed ] // Catch2::Catch2WithMain -> Catch2::Catch2
+}

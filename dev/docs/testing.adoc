@@ -1,0 +1,23 @@
+= testing
+:toc:
+:sectnums:
+
+== Stash
+
+=== Can I replace a symbol in a static library with my own version?
+
+https://stackoverflow.com/questions/51749969/can-i-replace-a-symbol-in-a-static-library-with-my-own-version
+
+
+=== Override a function call in C
+
+https://stackoverflow.com/questions/617554/override-a-function-call-in-c
+
+=== All you need to know about C Static libraries
+
+https://dev.to/iamkhalil42/all-you-need-to-know-about-c-static-libraries-1o0b
+
+
+=== Recover static library from executable
+
+https://unix.stackexchange.com/questions/554678/recover-static-library-from-executable
