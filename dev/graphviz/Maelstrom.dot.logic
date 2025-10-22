@@ -1,0 +1,16 @@
+digraph "logic" {
+node [
+  fontsize = "12"
+];
+    "node6" [ label = "logic", shape = octagon ];
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node6" -> "node1" [ style = dotted ] // logic -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node6" -> "node2" [ style = dotted ] // logic -> SDL2::SDL2main
+    "node4" [ label = "SDLmac", shape = octagon ];
+    "node6" -> "node4" [ style = dotted ] // logic -> SDLmac
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node4" -> "node1" [ style = dotted ] // SDLmac -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node4" -> "node2" [ style = dotted ] // SDLmac -> SDL2::SDL2main
+}

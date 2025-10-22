@@ -1,0 +1,10 @@
+digraph "snd2wav" {
+node [
+  fontsize = "12"
+];
+    "node11" [ label = "snd2wav", shape = egg ];
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node11" -> "node1" [ style = dotted ] // snd2wav -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node11" -> "node2" [ style = dotted ] // snd2wav -> SDL2::SDL2main
+}

@@ -1,0 +1,5 @@
+= Assets
+
+Copied from https://github.com/libsdl-org/SDL/tree/main/test
+
+https://github.com/libsdl-org/SDL

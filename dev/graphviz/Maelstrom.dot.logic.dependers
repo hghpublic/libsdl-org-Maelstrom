@@ -1,0 +1,12 @@
+digraph "logic" {
+node [
+  fontsize = "12"
+];
+    "node6" [ label = "logic", shape = octagon ];
+    "node0" [ label = "Maelstrom", shape = egg ];
+    "node0" -> "node6" [ style = dotted ] // Maelstrom -> logic
+    "node8" [ label = "test_game_loop_01", shape = egg ];
+    "node8" -> "node6" [ style = dotted ] // test_game_loop_01 -> logic
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node6" [ style = dotted ] // test_game_loop_02 -> logic
+}

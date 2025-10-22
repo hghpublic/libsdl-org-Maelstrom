@@ -1,0 +1,127 @@
+= Doxygen
+:toc:
+:sectnums:
+:icons: font
+:source-highlighter: highlight.js
+
+== Doxygen
+
+https://www.doxygen.nl/
+
+https://www.doxygen.nl/manual/faq.html
+
+----
+❯ cd dev/doxygen
+
+❯ doxygen -g       
+
+
+Configuration file 'Doxyfile' created.
+
+Now edit the configuration file and enter
+
+  doxygen
+
+to generate the documentation for your project
+
+
+----
+
+----
+❯ rm -rf docs/html docs/latex
+----
+
+----
+❯ doxygen -x                 
+# Difference with default Doxyfile 1.9.8
+PROJECT_NAME           = Maelstrom
+OUTPUT_DIRECTORY       = /workspaces/libsdl-org-Maelstrom/dev/doxygen/docs
+EXTRACT_ALL            = YES
+INPUT                  = /workspaces/libsdl-org-Maelstrom/ \
+                         /workspaces/libsdl-org-Maelstrom/maclib \
+                         /workspaces/libsdl-org-Maelstrom/netlogic \
+                         /workspaces/libsdl-org-Maelstrom/screenlib
+UML_LOOK               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+DOT_IMAGE_FORMAT       = svg
+INTERACTIVE_SVG        = YES
+----
+
+=== Diagrams
+
+https://www.doxygen.nl/manual/diagrams.html
+
+== GitHub
+
+https://github.com/doxygen/doxygen
+
+== Sphinx
+
+Create intelligent and beautiful documentation with ease
+
+https://www.sphinx-doc.org/
+
+https://github.com/readthedocs/sphinx_rtd_theme
+
+----
+sphinx-quickstart
+
+html_theme = "sphinx_rtd_theme"
+----
+
+== Breathe
+
+Breathe provides a bridge between the Sphinx and Doxygen documentation systems.
+
+https://www.breathe-doc.org/
+
+https://breathe.readthedocs.io/en/latest/
+
+https://github.com/breathe-doc/breathe
+
+----
+> pip install breathe
+----
+
+
+== Stash
+
+
+https://www.codeintrinsic.com/integrate-doxygen-with-cmake/
+
+=== C++ documentation with Doxygen/CMake/Sphinx/Breathe for those of us who are totally lost
+
+https://medium.com/practical-coding/c-documentation-with-doxygen-cmake-sphinx-breathe-for-those-of-use-who-are-totally-lost-7d555386fe13
+
+https://medium.com/@oliver.k.ernst/c-documentation-with-doxygen-cmake-sphinx-breathe-for-those-of-use-who-are-totally-lost-part-2-21f4fb1abd9f
+
+https://medium.com/@oliver.k.ernst/c-documentation-with-doxygen-cmake-sphinx-breathe-for-those-of-use-who-are-totally-lost-part-3-d20549d3b01f
+
+=== Clear, Functional C++ Documentation with Sphinx + Breathe + Doxygen + CMake
+
+https://devblogs.microsoft.com/cppblog/clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake/
+
+=== Quick setup to use Doxygen with CMake
+
+https://vicrucann.github.io/tutorials/quick-cmake-doxygen/
+
+
+== Sphinx
+
+https://www.sphinx-doc.org
+
+https://www.sphinx-doc.org/en/master/usage/installation.html
+
+== Breathe
+
+https://breathe.readthedocs.io/en/latest/
+
+----
+> pip install breathe
+----
+
+
+== DoxyPress
+
+https://www.copperspice.com/documentation-doxypress.html

@@ -1,0 +1,176 @@
+= wasm
+:toc:
+:sectnums:
+
+== WebAssembly
+
+https://webassembly.org/
+
+=== Compiling a new C/C++ module to WebAssembly
+
+https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/C_to_Wasm
+
+
+== emscripten
+
+https://github.com/emscripten-ports
+
+
+== python
+
+=== http.server — HTTP servers
+
+https://docs.python.org/3/library/http.server.html
+
+=== Local Server for Testing WASM
+
+https://til.bradyjoslin.com/wasm/local-server/
+
+[source, python]
+----
+import http.server
+import socketserver
+
+PORT = 8000
+
+Handler = http.server.SimpleHTTPRequestHandler
+Handler.extensions_map = {
+    '.html': 'text/html',
+    '.wasm': 'application/wasm',
+    '': 'application/octet-stream',
+}
+
+with socketserver.TCPServer(("", PORT), Handler) as httpd:
+    print("serving at port", PORT)
+    httpd.serve_forever()
+----
+
+=== Extending Python’s Simple HTTP Server
+
+https://medium.com/@c.gerard.gallant/extending-pythons-simple-http-server-1689f4eb1f87
+
+
+
+== Stash
+
+
+== vcpkg
+
+Source Emscripten's emsdk_env to get environment variables.
+Then build for triplet wasm32-emscripten.
+
+
+=== Emscripten with CMake
+
+https://stunlock.gg/posts/emscripten_with_cmake/
+
+
+=== How can vcpkg be integrated with Emscripten to work together? #40368
+
+https://github.com/microsoft/vcpkg/discussions/40368
+
+
+=== Port it to the web with Web assembly and Emscripten
+
+https://dev.to/baduit/port-it-to-the-web-with-web-assembly-and-emscripten-5c7k
+
+=== CMake cheat sheet!
+
+https://dev.to/baduit/port-it-to-the-web-with-web-assembly-and-emscripten-5c7k
+
+=== CMake with Emscripten and vcpkg can't bind two TOOLCHAIN_FILES
+
+https://stackoverflow.com/questions/63062200/cmake-with-emscripten-and-vcpkg-cant-bind-two-toolchain-files
+
+
+You set the VCPKG_CHAINLOAD_TOOLCHAIN_FILE variable (along with VCPKG_TARGET_TRIPLET)
+
+----
+cmake^ 
+  "-DCMAKE_TOOLCHAIN_FILE=%VCPKG%/scripts/buildsystems/vcpkg.cmake"^
+  "-DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=%EMSDK%/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake"^  
+  "-DVCPKG_TARGET_TRIPLET=wasm32-emscripten"
+----
+
+
+=== The Emscripten Toolkit: From C/C++ To WebAssembly
+
+https://medium.com/@codeinseoul/introduction-to-the-emscripten-toolkit-53f5dac9c74
+
+=== An improved guide for compiling WASM with Emscripten and Embind
+
+https://ninkovic.dev/blog/2022/an-improved-guide-for-compiling-wasm-with-emscripten-and-embind
+
+=== WebAssembly SDL example
+
+https://main.lv/writeup/web_assembly_sdl_example.md
+
+=== ​ How to build a SDL3 application to WebAssembly
+
+https://discourse.libsdl.org/t/how-to-build-a-sdl3-application-to-webassembly/48041
+
+https://github.com/Ravbug/sdl3-sample
+
+https://github.com/Ravbug/sdl3-sample/blob/main/config/README.md
+
+=== WebAssembly Lesson 2: Graphics with SDL
+
+https://www.jamesfmackenzie.com/howto/getting-started-with-webassembly-part-2-graphics-with-sdl/
+
+
+=== emscripten-sdl2-ogles2
+
+https://erik-larsen.github.io/emscripten-sdl2-ogles2/
+
+
+=== Game Development with WASM in Mind
+
+https://dev.to/mattconn/compiling-an-sdl2-game-to-wasm-42fj
+
+https://github.com/gabrielcuvillier/d3wasm
+
+=== Porting Games to the Web with WebAssembly
+
+https://robaboukhalil.medium.com/porting-games-to-the-web-with-webassembly-70d598e1a3ec
+
+=== D3Wasm: a port of id Tech 4 / Doom 3 engine to WebAssembly
+
+https://www.continuation-labs.com/projects/d3wasm/
+
+=== Roundup: The AutoCAD Web App at Google I/O 2018
+
+https://www.autodesk.com/blogs/autocad/autocad-web-app-google-io-2018
+
+=== A jq playground built with WebAssembly
+
+https://www.jqkungfu.com/
+
+https://www.levelupwasm.com/
+
+https://github.com/robertaboukhalil/jqkungfu
+
+=== Compiling an SDL2 Game to WASM
+
+https://dev.to/mattconn/compiling-an-sdl2-game-to-wasm-42fj
+
+== GitHub
+
+=== sdl-wasm
+
+https://github.com/shlomnissan/sdl-wasm
+
+=== sdl-canvas-wasm
+
+https://github.com/timhutton/sdl-canvas-wasm
+
+=== asteroids
+
+https://github.com/flightcrank/asteroids
+
+
+== YouTube
+
+=== Simon Lees: An Introduction to WebAssembly with SDL and C++
+
+https://www.youtube.com/watch?v=ZtEaQMyLfWA
+

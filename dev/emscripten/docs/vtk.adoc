@@ -1,0 +1,31 @@
+== VTK
+:toc:
+:sectnums:
+
+== VTK
+
+https://vtk.org/
+
+=== VTK documentation
+
+https://docs.vtk.org/en/latest/index.html
+
+=== Building using emscripten for WebAssembly
+
+https://docs.vtk.org/en/latest/advanced/build_wasm_emscripten.html
+
+[source, shell]
+----
+emcmake cmake \
+  -S ${VTK_SOURCE_DIR} \
+  -B ${VTK_BUILD_DIR} \
+  -G "Ninja" \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DBUILD_SHARED_LIBS:BOOL=OFF \
+  -DVTK_ENABLE_WEBGPU:BOOL=ON \
+  -DVTK_WEBASSEMBLY_64_BIT:BOOL=ON
+cmake --build ${VTK_BUILD_DIR}
+cmake --install ${VTK_BUILD_DIR} --prefix ${VTK_INSTALL_DIR}
+----
+
+`wasm64-emscripten`

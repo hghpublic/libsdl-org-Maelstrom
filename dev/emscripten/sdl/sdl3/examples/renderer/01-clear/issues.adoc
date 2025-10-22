@@ -1,0 +1,40 @@
+= Issues
+
+----
+___vscode_livepreview_injected_script:141 program exited (with status: 0), but keepRuntimeAlive() is set (counter=1) due to an async operation, so halting execution but not exiting the runtime or preventing further async execution (you can use emscripten_force_exit, if you want to force a true shutdown)
+(anonymous) @ ___vscode_livepreview_injected_script:141
+
+
+___vscode_livepreview_injected_script:141 Looks like you are rendering without using requestAnimationFrame for the main loop. You should use 0 for the frame rate in emscripten_set_main_loop in order to use requestAnimationFrame, as that can greatly improve your frame rates!
+(anonymous) @ ___vscode_livepreview_injected_script:141
+w
+
+await in createWasm
+(anonymous) @ index.js:9257
+___vscode_livepreview_injected_script:141 program exited (with status: 0), but keepRuntimeAlive() is set (counter=1) due to an async operation, so halting execution but not exiting the runtime or preventing further async execution (you can use emscripten_force_exit, if you want to force a true shutdown)
+(anonymous) @ ___vscode_livepreview_injected_script:141
+exitJS @ index.js:4053
+
+
+___vscode_livepreview_injected_script:141 Looks like you are rendering without using requestAnimationFrame for the main loop. You should use 0 for the frame rate in emscripten_set_main_loop in order to use requestAnimationFrame, as that can greatly improve your frame rates!
+(anonymous) @ ___vscode_livepreview_injected_script:141
+warnOnce @ index.js:911
+MainLoop_runner @ index.js:4161
+setTimeout
+MainLoop_scheduler_setTimeout @ index.js:3985
+MainLoop_runner @ index.js:4170
+requestAnimationFrame
+
+
+s @ browserSocketFactory.ts:111
+___vscode_livepreview_injected_script:141 program exited (with status: 0), but keepRuntimeAlive() is set (counter=1) due to an async operation, so halting execution but not exiting the runtime or preventing further async execution (you can use emscripten_force_exit, if you want to force a true shutdown)
+(anonymous) @ ___vscode_livepreview_injected_script:141
+exitJS @ index.js:4053
+$
+
+console.ts:137 [Extension Host] [relatedFiles] unknown language asciidoc
+gbs @ console.ts:137
+$logExtensionHostMessage @ mainThreadConsole.ts:39
+
+
+----
