@@ -1,0 +1,48 @@
+digraph "SDL2::SDL2main" {
+node [
+  fontsize = "12"
+];
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node0" [ label = "Maelstrom", shape = egg ];
+    "node0" -> "node2" [ style = dotted ] // Maelstrom -> SDL2::SDL2main
+    "node4" [ label = "SDLmac", shape = octagon ];
+    "node4" -> "node2" [ style = dotted ] // SDLmac -> SDL2::SDL2main
+    "node0" [ label = "Maelstrom", shape = egg ];
+    "node0" -> "node4" [ style = dotted ] // Maelstrom -> SDLmac
+    "node6" [ label = "logic", shape = octagon ];
+    "node6" -> "node4" [ style = dotted ] // logic -> SDLmac
+    "node0" [ label = "Maelstrom", shape = egg ];
+    "node0" -> "node6" [ style = dotted ] // Maelstrom -> logic
+    "node8" [ label = "test_game_loop_01", shape = egg ];
+    "node8" -> "node6" [ style = dotted ] // test_game_loop_01 -> logic
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node6" [ style = dotted ] // test_game_loop_02 -> logic
+    "node8" [ label = "test_game_loop_01", shape = egg ];
+    "node8" -> "node4" [ style = dotted ] // test_game_loop_01 -> SDLmac
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node4" [ style = dotted ] // test_game_loop_02 -> SDLmac
+    "node5" [ label = "SDLscreen", shape = octagon ];
+    "node5" -> "node2" [ style = dotted ] // SDLscreen -> SDL2::SDL2main
+    "node0" [ label = "Maelstrom", shape = egg ];
+    "node0" -> "node5" [ style = dotted ] // Maelstrom -> SDLscreen
+    "node8" [ label = "test_game_loop_01", shape = egg ];
+    "node8" -> "node5" [ style = dotted ] // test_game_loop_01 -> SDLscreen
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node5" [ style = dotted ] // test_game_loop_02 -> SDLscreen
+    "node6" [ label = "logic", shape = octagon ];
+    "node6" -> "node2" [ style = dotted ] // logic -> SDL2::SDL2main
+    "node7" [ label = "misc", shape = octagon ];
+    "node7" -> "node2" [ style = dotted ] // misc -> SDL2::SDL2main
+    "node0" [ label = "Maelstrom", shape = egg ];
+    "node0" -> "node7" [ style = dotted ] // Maelstrom -> misc
+    "node8" [ label = "test_game_loop_01", shape = egg ];
+    "node8" -> "node7" [ style = dotted ] // test_game_loop_01 -> misc
+    "node8" [ label = "test_game_loop_01", shape = egg ];
+    "node8" -> "node2" [ style = dotted ] // test_game_loop_01 -> SDL2::SDL2main
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node2" [ style = dotted ] // test_game_loop_02 -> SDL2::SDL2main
+    "node12" [ label = "test_misc", shape = octagon ];
+    "node12" -> "node2" [ style = dotted ] // test_misc -> SDL2::SDL2main
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node12" [ style = dotted ] // test_game_loop_02 -> test_misc
+}

@@ -1,0 +1,88 @@
+Making all in netlogic
+make[1]: Entering directory '/workspaces/libsdl-org-Maelstrom/netlogic'
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT about.o -MD -MP -MF .deps/about.Tpo -c -o about.o about.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT blit.o -MD -MP -MF .deps/blit.Tpo -c -o blit.o blit.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT game.o -MD -MP -MF .deps/game.Tpo -c -o game.o game.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT logic.o -MD -MP -MF .deps/logic.Tpo -c -o logic.o logic.cpp
+mv -f .deps/logic.Tpo .deps/logic.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT make.o -MD -MP -MF .deps/make.Tpo -c -o make.o make.cpp
+mv -f .deps/about.Tpo .deps/about.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT netplay.o -MD -MP -MF .deps/netplay.Tpo -c -o netplay.o netplay.cpp
+mv -f .deps/blit.Tpo .deps/blit.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT object.o -MD -MP -MF .deps/object.Tpo -c -o object.o object.cpp
+mv -f .deps/game.Tpo .deps/game.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT objects.o -MD -MP -MF .deps/objects.Tpo -c -o objects.o objects.cpp
+mv -f .deps/object.Tpo .deps/object.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT player.o -MD -MP -MF .deps/player.Tpo -c -o player.o player.cpp
+mv -f .deps/netplay.Tpo .deps/netplay.Po
+mv -f .deps/make.Tpo .deps/make.Po
+mv -f .deps/objects.Tpo .deps/objects.Po
+mv -f .deps/player.Tpo .deps/player.Po
+rm -f liblogic.a
+ar cru liblogic.a about.o blit.o game.o logic.o make.o netplay.o object.o objects.o player.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib liblogic.a
+make[1]: Leaving directory '/workspaces/libsdl-org-Maelstrom/netlogic'
+Making all in screenlib
+make[1]: Entering directory '/workspaces/libsdl-org-Maelstrom/screenlib'
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT SDL_FrameBuf.o -MD -MP -MF .deps/SDL_FrameBuf.Tpo -c -o SDL_FrameBuf.o SDL_FrameBuf.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT pixel.o -MD -MP -MF .deps/pixel.Tpo -c -o pixel.o pixel.cpp
+mv -f .deps/pixel.Tpo .deps/pixel.Po
+mv -f .deps/SDL_FrameBuf.Tpo .deps/SDL_FrameBuf.Po
+rm -f libSDLscreen.a
+ar cru libSDLscreen.a SDL_FrameBuf.o pixel.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libSDLscreen.a
+make[1]: Leaving directory '/workspaces/libsdl-org-Maelstrom/screenlib'
+Making all in maclib
+make[1]: Entering directory '/workspaces/libsdl-org-Maelstrom/maclib'
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT macres.o -MD -MP -MF .deps/macres.Tpo -c -o macres.o macres.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT Mac_FontServ.o -MD -MP -MF .deps/Mac_FontServ.Tpo -c -o Mac_FontServ.o Mac_FontServ.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT Mac_Resource.o -MD -MP -MF .deps/Mac_Resource.Tpo -c -o Mac_Resource.o Mac_Resource.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT Mac_Sound.o -MD -MP -MF .deps/Mac_Sound.Tpo -c -o Mac_Sound.o Mac_Sound.cpp
+mv -f .deps/Mac_Sound.Tpo .deps/Mac_Sound.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT Mac_Wave.o -MD -MP -MF .deps/Mac_Wave.Tpo -c -o Mac_Wave.o Mac_Wave.cpp
+mv -f .deps/Mac_Resource.Tpo .deps/Mac_Resource.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT playwave.o -MD -MP -MF .deps/playwave.Tpo -c -o playwave.o playwave.cpp
+mv -f .deps/macres.Tpo .deps/macres.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT snd2wav.o -MD -MP -MF .deps/snd2wav.Tpo -c -o snd2wav.o snd2wav.cpp
+mv -f .deps/Mac_FontServ.Tpo .deps/Mac_FontServ.Po
+mv -f .deps/Mac_Wave.Tpo .deps/Mac_Wave.Po
+rm -f libSDLmac.a
+ar cru libSDLmac.a Mac_FontServ.o Mac_Resource.o Mac_Sound.o Mac_Wave.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libSDLmac.a
+g++  -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\"   -o macres macres.o libSDLmac.a -lSDL2  -lSDL2_net
+mv -f .deps/snd2wav.Tpo .deps/snd2wav.Po
+g++  -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\"   -o snd2wav snd2wav.o libSDLmac.a -lSDL2  -lSDL2_net
+mv -f .deps/playwave.Tpo .deps/playwave.Po
+g++  -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I.. -I../netlogic -I../screenlib -I../maclib -DLIBDIR=\"/usr/local/games/Maelstrom\"   -o playwave playwave.o libSDLmac.a -lSDL2  -lSDL2_net
+make[1]: Leaving directory '/workspaces/libsdl-org-Maelstrom/maclib'
+make[1]: Entering directory '/workspaces/libsdl-org-Maelstrom'
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT checksum.o -MD -MP -MF .deps/checksum.Tpo -c -o checksum.o checksum.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT controls.o -MD -MP -MF .deps/controls.Tpo -c -o controls.o controls.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT dialog.o -MD -MP -MF .deps/dialog.Tpo -c -o dialog.o dialog.cpp
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT fastrand.o -MD -MP -MF .deps/fastrand.Tpo -c -o fastrand.o fastrand.cpp
+mv -f .deps/checksum.Tpo .deps/checksum.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT init.o -MD -MP -MF .deps/init.Tpo -c -o init.o init.cpp
+mv -f .deps/fastrand.Tpo .deps/fastrand.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT load.o -MD -MP -MF .deps/load.Tpo -c -o load.o load.cpp
+mv -f .deps/controls.Tpo .deps/controls.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT main.o -MD -MP -MF .deps/main.Tpo -c -o main.o main.cpp
+mv -f .deps/load.Tpo .deps/load.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT myerror.o -MD -MP -MF .deps/myerror.Tpo -c -o myerror.o myerror.cpp
+mv -f .deps/init.Tpo .deps/init.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT netscore.o -MD -MP -MF .deps/netscore.Tpo -c -o netscore.o netscore.cpp
+mv -f .deps/dialog.Tpo .deps/dialog.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT rect.o -MD -MP -MF .deps/rect.Tpo -c -o rect.o rect.cpp
+mv -f .deps/rect.Tpo .deps/rect.Po
+g++ -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT scores.o -MD -MP -MF .deps/scores.Tpo -c -o scores.o scores.cpp
+mv -f .deps/myerror.Tpo .deps/myerror.Po
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"Maelstrom\" -DVERSION=\"3.0.7\" -I.     -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\" -MT Maelstrom-netd.o -MD -MP -MF .deps/Maelstrom-netd.Tpo -c -o Maelstrom-netd.o Maelstrom-netd.c
+mv -f .deps/main.Tpo .deps/main.Po
+mv -f .deps/netscore.Tpo .deps/netscore.Po
+mv -f .deps/Maelstrom-netd.Tpo .deps/Maelstrom-netd.Po
+gcc  -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\"   -o Maelstrom-netd Maelstrom-netd.o  -lSDL2  -lSDL2_net
+mv -f .deps/scores.Tpo .deps/scores.Po
+g++  -g -O2 -g -O2 -I/usr/include/SDL2 -D_REENTRANT  -I. -I./netlogic -I./screenlib -I./maclib -DLIBDIR=\"/usr/local/games/Maelstrom\"   -o Maelstrom checksum.o controls.o dialog.o fastrand.o init.o load.o main.o myerror.o netscore.o rect.o scores.o netlogic/liblogic.a screenlib/libSDLscreen.a maclib/libSDLmac.a -lm   -lSDL2  -lSDL2_net
+make[1]: Leaving directory '/workspaces/libsdl-org-Maelstrom'

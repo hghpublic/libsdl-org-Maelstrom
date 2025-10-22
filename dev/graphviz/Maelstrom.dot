@@ -1,0 +1,75 @@
+digraph "Maelstrom" {
+node [
+  fontsize = "12"
+];
+subgraph clusterLegend {
+  label = "Legend";
+  color = black;
+  edge [ style = invis ];
+  legendNode0 [ label = "Executable", shape = egg ];
+  legendNode1 [ label = "Static Library", shape = octagon ];
+  legendNode2 [ label = "Shared Library", shape = doubleoctagon ];
+  legendNode3 [ label = "Module Library", shape = tripleoctagon ];
+  legendNode4 [ label = "Interface Library", shape = pentagon ];
+  legendNode5 [ label = "Object Library", shape = hexagon ];
+  legendNode6 [ label = "Unknown Library", shape = septagon ];
+  legendNode7 [ label = "Custom Target", shape = box ];
+  legendNode0 -> legendNode1 [ style = solid ];
+  legendNode0 -> legendNode2 [ style = solid ];
+  legendNode0 -> legendNode3;
+  legendNode1 -> legendNode4 [ label = "Interface", style = dashed ];
+  legendNode2 -> legendNode5 [ label = "Private", style = dotted ];
+  legendNode3 -> legendNode6 [ style = solid ];
+  legendNode0 -> legendNode7;
+}
+    "node0" [ label = "Maelstrom", shape = egg ];
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node0" -> "node1" [ style = dotted ] // Maelstrom -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node0" -> "node2" [ style = dotted ] // Maelstrom -> SDL2::SDL2main
+    "node3" [ label = "SDL2_net::SDL2_net-static", shape = octagon ];
+    "node0" -> "node3" [ style = dotted ] // Maelstrom -> SDL2_net::SDL2_net-static
+    "node4" [ label = "SDLmac", shape = octagon ];
+    "node4" -> "node1" [ style = dotted ] // SDLmac -> SDL2::SDL2-static
+    "node4" -> "node2" [ style = dotted ] // SDLmac -> SDL2::SDL2main
+    "node0" -> "node4" [ style = dotted ] // Maelstrom -> SDLmac
+    "node5" [ label = "SDLscreen", shape = octagon ];
+    "node5" -> "node1" [ style = dotted ] // SDLscreen -> SDL2::SDL2-static
+    "node5" -> "node2" [ style = dotted ] // SDLscreen -> SDL2::SDL2main
+    "node0" -> "node5" [ style = dotted ] // Maelstrom -> SDLscreen
+    "node6" [ label = "logic", shape = octagon ];
+    "node6" -> "node1" [ style = dotted ] // logic -> SDL2::SDL2-static
+    "node6" -> "node2" [ style = dotted ] // logic -> SDL2::SDL2main
+    "node6" -> "node4" [ style = dotted ] // logic -> SDLmac
+    "node0" -> "node6" [ style = dotted ] // Maelstrom -> logic
+    "node7" [ label = "misc", shape = octagon ];
+    "node7" -> "node1" [ style = dotted ] // misc -> SDL2::SDL2-static
+    "node7" -> "node2" [ style = dotted ] // misc -> SDL2::SDL2main
+    "node0" -> "node7" [ style = dotted ] // Maelstrom -> misc
+    "node8" [ label = "test_game_loop_01", shape = egg ];
+    "node9" [ label = "Catch2::Catch2", shape = octagon ];
+    "node8" -> "node9" [ style = dotted ] // test_game_loop_01 -> Catch2::Catch2
+    "node10" [ label = "Catch2::Catch2WithMain", shape = octagon ];
+    "node10" -> "node9" [ style = dashed ] // Catch2::Catch2WithMain -> Catch2::Catch2
+    "node8" -> "node10" [ style = dotted ] // test_game_loop_01 -> Catch2::Catch2WithMain
+    "node8" -> "node1" [ style = dotted ] // test_game_loop_01 -> SDL2::SDL2-static
+    "node8" -> "node2" [ style = dotted ] // test_game_loop_01 -> SDL2::SDL2main
+    "node8" -> "node3" [ style = dotted ] // test_game_loop_01 -> SDL2_net::SDL2_net-static
+    "node8" -> "node4" [ style = dotted ] // test_game_loop_01 -> SDLmac
+    "node8" -> "node5" [ style = dotted ] // test_game_loop_01 -> SDLscreen
+    "node8" -> "node6" [ style = dotted ] // test_game_loop_01 -> logic
+    "node8" -> "node7" [ style = dotted ] // test_game_loop_01 -> misc
+    "node11" [ label = "test_game_loop_02", shape = egg ];
+    "node11" -> "node9" [ style = dotted ] // test_game_loop_02 -> Catch2::Catch2
+    "node11" -> "node10" [ style = dotted ] // test_game_loop_02 -> Catch2::Catch2WithMain
+    "node11" -> "node1" [ style = dotted ] // test_game_loop_02 -> SDL2::SDL2-static
+    "node11" -> "node2" [ style = dotted ] // test_game_loop_02 -> SDL2::SDL2main
+    "node11" -> "node3" [ style = dotted ] // test_game_loop_02 -> SDL2_net::SDL2_net-static
+    "node11" -> "node4" [ style = dotted ] // test_game_loop_02 -> SDLmac
+    "node11" -> "node5" [ style = dotted ] // test_game_loop_02 -> SDLscreen
+    "node11" -> "node6" [ style = dotted ] // test_game_loop_02 -> logic
+    "node12" [ label = "test_misc", shape = octagon ];
+    "node12" -> "node1" [ style = dotted ] // test_misc -> SDL2::SDL2-static
+    "node12" -> "node2" [ style = dotted ] // test_misc -> SDL2::SDL2main
+    "node11" -> "node12" [ style = dotted ] // test_game_loop_02 -> test_misc
+}

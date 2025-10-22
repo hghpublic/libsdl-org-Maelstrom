@@ -1,0 +1,53 @@
+= examples
+
+https://github.com/libsdl-org/SDL/tree/main/examples
+
+https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/C_to_Wasm
+
+----
+// python3 -m http.server
+python3 serve.py
+----
+
+== emscripten
+
+== Emscripten Tutorial
+
+https://emscripten.org/docs/getting_started/Tutorial.html
+
+
+== Issues
+
+https://github.com/libsdl-org/SDL/blob/main/include/SDL3/SDL_surface.h
+
+----
+[11/14] Building C object renderer/06-textures/CMakeFiles/06-textures.dir/textures.c.o
+FAILED: renderer/06-textures/CMakeFiles/06-textures.dir/textures.c.o 
+/workspaces/libsdl-org-Maelstrom/dev/emscripten/emsdk/upstream/emscripten/emcc  -isystem /workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/build/vcpkg_installed/wasm32-emscripten/include  -MD -MT renderer/06-textures/CMakeFiles/06-textures.dir/textures.c.o -MF renderer/06-textures/CMakeFiles/06-textures.dir/textures.c.o.d -o renderer/06-textures/CMakeFiles/06-textures.dir/textures.c.o -c /workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/renderer/06-textures/textures.c
+/workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/renderer/06-textures/textures.c:48:15: error: call to undeclared function 'SDL_LoadPNG'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   48 |     surface = SDL_LoadPNG(png_path);
+      |               ^
+/workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/renderer/06-textures/textures.c:48:13: error: incompatible integer to pointer conversion assigning to 'SDL_Surface *' (aka 'struct SDL_Surface *') from 'int' [-Wint-conversion]
+   48 |     surface = SDL_LoadPNG(png_path);
+      |             ^ ~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+ninja: build stopped: subcommand failed.
+----
+
+----
+FAILED: renderer/06-textures/06-textures.html 
+: && /workspaces/libsdl-org-Maelstrom/dev/emscripten/emsdk/upstream/emscripten/em++  -s EXIT_RUNTIME=1 --embed-file /workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/assets/sample.png renderer/06-textures/CMakeFiles/06-textures.dir/textures.cpp.o -o renderer/06-textures/06-textures.html  vcpkg_installed/wasm32-emscripten/debug/lib/libSDL3.a  vcpkg_installed/wasm32-emscripten/debug/lib/libSDL3_image.a  vcpkg_installed/wasm32-emscripten/debug/lib/libSDL3.a  -lm  vcpkg_installed/wasm32-emscripten/lib/libpng16.a  vcpkg_installed/wasm32-emscripten/lib/libz.a && cd /workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/build/renderer/06-textures && /opt/cmake/bin/cmake -E copy /workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/serve.py /workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/build/renderer/06-textures/ && cd /workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/build/renderer/06-textures && /opt/cmake/bin/cmake -E copy /workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/assets/sample.png /workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/build/renderer/06-textures/
+Error: Embedding "/workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/assets/sample.png" which is not contained within the current directory "/workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/build".  This is invalid since the current directory becomes the root that the generated code will see.  To include files outside of the current working directory you can use the `--preload-file srcpath@dstpath` syntax to explicitly specify the target location.
+em++: error: '/workspaces/libsdl-org-Maelstrom/dev/emscripten/emsdk/upstream/emscripten/tools/file_packager renderer/06-textures/06-textures.data --from-emcc --embed /workspaces/libsdl-org-Maelstrom/dev/emscripten/sdl/sdl3/examples/assets/sample.png --obj-output=/tmp/emscripten_temp_ckcmf5jd/embedded_files.o' failed (returned 1)
+ninja: build stopped: subcommand failed.
+----
+
+== Stash
+
+=== My step by step guides for SDL3 to build for Android and WebAssembly
+
+https://discourse.libsdl.org/t/my-step-by-step-guides-for-sdl3-to-build-for-android-and-webassembly/50766/1
+
+=== SDL3 App From Source Minimal Example
+
+https://github.com/Ravbug/sdl3-sample

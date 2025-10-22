@@ -1,0 +1,18 @@
+= network
+
+----
+/sbin/ip route|awk '/default/ { print $3 }'
+----
+
+== macOS
+
+----
+
+ipconfig getifaddr en0
+
+ifconfig en0| grep "inet[ ]" | awk '{print $2}'
+
+alias ip-addr="ifconfig en0| grep \"inet[ ]\" | awk '{print \$2}'"
+
+ifconfig en0 | grep inet | grep -v inet6 | cut -d ' ' -f2
+----

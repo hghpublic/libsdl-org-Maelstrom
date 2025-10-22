@@ -1,0 +1,7 @@
+= SDL
+:toc:
+:sectnums:
+
+== SDL
+
+https://wiki.libsdl.org/SDL3/README-emscripten

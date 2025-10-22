@@ -1,0 +1,9 @@
+= asyncify
+:toc: 
+:sectnums:
+
+== emscripten
+
+=== Asynchronous Code
+
+https://emscripten.org/docs/porting/asyncify.html

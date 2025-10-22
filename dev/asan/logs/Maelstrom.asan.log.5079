@@ -1,0 +1,21 @@
+
+=================================================================
+==5079==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 1 byte(s) in 1 object(s) allocated from:
+    #0 0xffff82f484a8 in operator new[](unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:98
+    #1 0xaaaac97d1304 in Message(char const*) /workspaces/libsdl-org-Maelstrom/main.cpp:686
+    #2 0xaaaac97cd138 in RunPlayGame /workspaces/libsdl-org-Maelstrom/main.cpp:62
+    #3 0xaaaac97d28b0 in ButtonList::Activate_Button(unsigned short, unsigned short) (/workspaces/libsdl-org-Maelstrom/build/Maelstrom+0x328b0) (BuildId: 93ab02cd0ce83289e0dc43e0e6b8f4228079e8c6)
+    #4 0xaaaac97cea04 in main /workspaces/libsdl-org-Maelstrom/main.cpp:397
+    #5 0xffff829484c0 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #6 0xffff82948594 in __libc_start_main_impl ../csu/libc-start.c:360
+    #7 0xaaaac97cceec in _start (/workspaces/libsdl-org-Maelstrom/build/Maelstrom+0x2ceec) (BuildId: 93ab02cd0ce83289e0dc43e0e6b8f4228079e8c6)
+
+-----------------------------------------------------
+Suppressions used:
+  count      bytes template
+    441      99164 libGLX_mesa.so.0
+-----------------------------------------------------
+
+SUMMARY: AddressSanitizer: 1 byte(s) leaked in 1 allocation(s).

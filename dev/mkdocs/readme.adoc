@@ -1,0 +1,23 @@
+= mkdocs
+:toc:
+:sectnums:
+
+== mkdocs
+
+https://www.mkdocs.org/
+
+https://github.com/mkdocs/mkdocs
+
+----
+❯ sudo apt install mkdocs
+----
+
+== CxxDox
+
+https://www.kfr.dev/
+
+https://github.com/kfrlib/cxxdox
+
+== Brisk
+
+https://github.com/brisklib/brisk

@@ -1,0 +1,149 @@
+= Sphinx
+:toc:
+:sectnums:
+:icons: font
+:source-highlighter: highlight.js
+
+== Sphinx
+
+https://www.sphinx-doc.org/
+
+https://www.sphinx-doc.org/en/master/usage/installation.html
+
+----
+❯ cd dev/sphinx
+
+❯ sphinx-quickstart
+
+
+
+----
+
+----
+❯ rm -rf docs/html docs/latex
+----
+
+
+== Sphinx
+
+Create intelligent and beautiful documentation with ease
+
+https://www.sphinx-doc.org/
+
+
+----
+sphinx-quickstart
+
+html_theme = "sphinx_rtd_theme"
+----
+
+https://www.sphinx-doc.org/en/master/usage/installation.html
+
+
+https://www.sphinx-doc.org/en/master/usage/quickstart.html
+
+=== Themes
+
+https://sphinx-themes.readthedocs.io/en/latest/
+
+==== sphinx-rtd-theme
+
+https://github.com/readthedocs/sphinx_rtd_theme
+
+https://sphinx-rtd-theme.readthedocs.io/en/stable/installing.html
+
+----
+sudo apt install python3-sphinx-rtd-theme
+----
+
+
+=== C and {Cpp} domains
+
+https://www.sphinx-doc.org/en/master/tutorial/describing-code.html#other-languages-c-c-others
+
+https://www.sphinx-doc.org/en/master/usage/domains/c.html
+
+https://www.sphinx-doc.org/en/master/usage/domains/cpp.html
+
+
+== Breathe
+
+Breathe provides a bridge between the Sphinx and Doxygen documentation systems.
+
+https://www.breathe-doc.org/
+
+https://breathe.readthedocs.io/en/latest/
+
+https://github.com/breathe-doc/breathe
+
+----
+> pip install breathe
+----
+
+== Exhale
+
+https://exhale.readthedocs.io/en/latest/index.html
+
+https://github.com/svenevs/exhale
+
+== Stash
+
+
+https://www.codeintrinsic.com/integrate-doxygen-with-cmake/
+
+=== C++ documentation with Doxygen/CMake/Sphinx/Breathe for those of us who are totally lost
+
+https://medium.com/practical-coding/c-documentation-with-doxygen-cmake-sphinx-breathe-for-those-of-use-who-are-totally-lost-7d555386fe13
+
+https://medium.com/@oliver.k.ernst/c-documentation-with-doxygen-cmake-sphinx-breathe-for-those-of-use-who-are-totally-lost-part-2-21f4fb1abd9f
+
+https://medium.com/@oliver.k.ernst/c-documentation-with-doxygen-cmake-sphinx-breathe-for-those-of-use-who-are-totally-lost-part-3-d20549d3b01f
+
+=== Clear, Functional C++ Documentation with Sphinx + Breathe + Doxygen + CMake
+
+https://devblogs.microsoft.com/cppblog/clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake/
+
+=== Quick setup to use Doxygen with CMake
+
+https://vicrucann.github.io/tutorials/quick-cmake-doxygen/
+
+=== Documenting C++ Code with Sphinx
+
+https://medium.com/@aytackahveci93/documenting-c-code-with-sphinx-d6315b338615
+
+=== Using Sphinx-apidoc to generate documentation from C++ code
+
+https://stackoverflow.com/questions/11246637/using-sphinx-apidoc-to-generate-documentation-from-c-code
+
+=== Sphinx + Doxygen
+
+https://zingale.github.io/phy504/sphinx-doxygen.html
+
+
+=== C/C++ Documentation Using Sphinx
+
+https://leimao.github.io/blog/CPP-Documentation-Using-Sphinx/
+
+=== Creating C++ Sphinx Docs: using Doxygen and Breathe 📚 #
+
+https://rodneylab.com/creating-c++-sphinx-docs/
+
+=== My Sphinx Best Practice Guide for Multi-version Documentation in Different Languages
+
+https://www.codingwiththomas.com/blog/my-sphinx-best-practice-for-a-multiversion-documentation-in-different-languages
+
+=== Sphinx API Documentation for C/C++ Projects
+
+https://docs.verilogtorouting.org/en/latest/dev/c_api_doc/
+
+=== Documenting C++ Code with Sphinx
+
+https://medium.com/@aytackahveci93/documenting-c-code-with-sphinx-d6315b338615
+
+=== (CMake Series) Part 6 - Creating Documentation with Doxygen, Sphinx, and Breathe
+
+https://blog.xizhibei.me/en/2020/05/19/cmake-6-docs-with-doxygen-sphinx-breathe/
+
+=== Workflow
+
+https://brunowu.github.io/doxygen_sphinx_example/build.html

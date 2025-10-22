@@ -1,0 +1,44 @@
+digraph "test_game_loop_01" {
+node [
+  fontsize = "12"
+];
+    "node8" [ label = "test_game_loop_01", shape = egg ];
+    "node9" [ label = "Catch2::Catch2", shape = octagon ];
+    "node8" -> "node9" [ style = dotted ] // test_game_loop_01 -> Catch2::Catch2
+    "node10" [ label = "Catch2::Catch2WithMain", shape = octagon ];
+    "node8" -> "node10" [ style = dotted ] // test_game_loop_01 -> Catch2::Catch2WithMain
+    "node9" [ label = "Catch2::Catch2", shape = octagon ];
+    "node10" -> "node9" [ style = dashed ] // Catch2::Catch2WithMain -> Catch2::Catch2
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node8" -> "node1" [ style = dotted ] // test_game_loop_01 -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node8" -> "node2" [ style = dotted ] // test_game_loop_01 -> SDL2::SDL2main
+    "node3" [ label = "SDL2_net::SDL2_net-static", shape = octagon ];
+    "node8" -> "node3" [ style = dotted ] // test_game_loop_01 -> SDL2_net::SDL2_net-static
+    "node4" [ label = "SDLmac", shape = octagon ];
+    "node8" -> "node4" [ style = dotted ] // test_game_loop_01 -> SDLmac
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node4" -> "node1" [ style = dotted ] // SDLmac -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node4" -> "node2" [ style = dotted ] // SDLmac -> SDL2::SDL2main
+    "node5" [ label = "SDLscreen", shape = octagon ];
+    "node8" -> "node5" [ style = dotted ] // test_game_loop_01 -> SDLscreen
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node5" -> "node1" [ style = dotted ] // SDLscreen -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node5" -> "node2" [ style = dotted ] // SDLscreen -> SDL2::SDL2main
+    "node6" [ label = "logic", shape = octagon ];
+    "node8" -> "node6" [ style = dotted ] // test_game_loop_01 -> logic
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node6" -> "node1" [ style = dotted ] // logic -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node6" -> "node2" [ style = dotted ] // logic -> SDL2::SDL2main
+    "node4" [ label = "SDLmac", shape = octagon ];
+    "node6" -> "node4" [ style = dotted ] // logic -> SDLmac
+    "node7" [ label = "misc", shape = octagon ];
+    "node8" -> "node7" [ style = dotted ] // test_game_loop_01 -> misc
+    "node1" [ label = "SDL2::SDL2-static\n(SDL2::SDL2)", shape = octagon ];
+    "node7" -> "node1" [ style = dotted ] // misc -> SDL2::SDL2-static
+    "node2" [ label = "SDL2::SDL2main", shape = octagon ];
+    "node7" -> "node2" [ style = dotted ] // misc -> SDL2::SDL2main
+}
