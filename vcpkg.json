@@ -1,0 +1,10 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+    "name": "maelstrom",
+    "version": "4.0.0",
+    "dependencies": [
+        "catch2",
+        "sdl3",
+        "physfs"
+    ]
+}
