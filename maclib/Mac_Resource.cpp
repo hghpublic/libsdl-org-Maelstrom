@@ -95,6 +95,8 @@ struct Resource_Map {
 #endif
 	};
 
+#define UNUSED_RESULT(X) if(X){}
+
 int Res_cmp(const void *A, const void *B)
 {
 	struct Mac_Resource::resource *a, *b;
@@ -121,13 +123,13 @@ static void CheckAppleFile(FILE *resfile, Uint32 *resbase)
 	ASHeader header;
 	if (fread(&header.magicNum,sizeof(header.magicNum),1,resfile)&&
 		(bytesex32(header.magicNum) == APPLEDOUBLE_MAGIC) ) {
-		fread(&header.versionNum,
-				sizeof(header.versionNum), 1, resfile);
+		UNUSED_RESULT(fread(&header.versionNum,
+				sizeof(header.versionNum), 1, resfile));
 		bytesex32(header.versionNum);
-		fread(&header.filler,
-				sizeof(header.filler), 1, resfile);
-		fread(&header.numEntries,
-				sizeof(header.numEntries), 1, resfile);
+		UNUSED_RESULT(fread(&header.filler,
+				sizeof(header.filler), 1, resfile));
+		UNUSED_RESULT(fread(&header.numEntries,
+				sizeof(header.numEntries), 1, resfile));
 		bytesex16(header.numEntries);
 #ifdef APPLEDOUBLE_DEBUG
 mesg("Header magic: 0x%.8x, version 0x%.8x\n",
@@ -363,10 +365,10 @@ Mac_Resource:: Mac_Resource(const char *file)
 				fseek(filep, 
 		base+Header.map_offset+Map.names_offset+ref_ent.Name_offset,
 								SEEK_SET);
-				fread(&name_len, 1, 1, filep);
+				UNUSED_RESULT(fread(&name_len, 1, 1, filep));
 				Resources[i].list[n].name=new char[name_len+1];
-				fread(Resources[i].list[n].name,
-							1, name_len, filep);
+				UNUSED_RESULT(fread(Resources[i].list[n].name,
+							1, name_len, filep));
 				Resources[i].list[n].name[name_len] = '\0';
 				fseek(filep, cur_offset, SEEK_SET);
 			}
@@ -482,7 +484,7 @@ Mac_Resource:: Resource(const char *res_type, Uint16 id)
 					/* Load it */
 					d = new Mac_ResData;
 					fseek(filep, base+res_offset+Resources[i].list[n].offset, SEEK_SET);
-					fread(&d->length, 4, 1, filep);
+					UNUSED_RESULT(fread(&d->length, 4, 1, filep));
 					bytesex32(d->length);
 					d->data = new Uint8[d->length];
 					if (!fread(d->data,d->length,1,filep)) {
@@ -519,7 +521,7 @@ Mac_Resource:: Resource(const char *res_type, const char *name)
 					/* Load it */
 					d = new Mac_ResData;
 					fseek(filep, base+res_offset+Resources[i].list[n].offset, SEEK_SET);
-					fread(&d->length, 4, 1, filep);
+					UNUSED_RESULT(fread(&d->length, 4, 1, filep));
 					bytesex32(d->length);
 					d->data = new Uint8[d->length];
 					if (!fread(d->data,d->length,1,filep)) {

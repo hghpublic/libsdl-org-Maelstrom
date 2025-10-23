@@ -43,6 +43,8 @@ typedef struct {
 
 connection players[MAX_CONNECTIONS];
 
+#define UNUSED_RESULT(X) if(X){}
+
 /* This function disconnects a player */
 void DisconnectPlayer(int which)
 {
@@ -67,7 +69,7 @@ void SendError(int which, char *message)
 	mesgbuf[1] = NET_ABORT;
 	strcpy((char *)&mesgbuf[2], message);
 printf("Sending error '%s' to player in slot %d\n", message, which);
-	(void) write(players[which].sockfd, mesgbuf, mesglen);
+	UNUSED_RESULT(write(players[which].sockfd, mesgbuf, mesglen));
 
 	DisconnectPlayer(which);
 }
@@ -168,7 +170,7 @@ printf("%s\n", ptr);
 		buffer[0] = len;
 
 		for ( i=0; i<numplayers; ++i ) {
-			(void) write(players[positions[i]].sockfd, buffer, len);
+			UNUSED_RESULT(write(players[positions[i]].sockfd, buffer, len));
 			DisconnectPlayer(positions[i]);
 		}
 	}
