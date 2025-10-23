@@ -1,0 +1,51 @@
+= Maelstrom
+:toc:
+:sectnums:
+ifndef::env-github[:icons: font]
+:note-caption: :paperclip:
+:important-caption: :exclamation:
+:warning-caption: :warning:
+
+[IMPORTANT]
+====
+The commit history of this branch is volatile. +
+Rebasing and force pushing happens at will. +
+The commits in this branch mostly collect changes with a narrow scope. +
+They rarely document code evolution. +
+The history may be rewritten without notice.
+====
+
+The changes to the source code are minimal and a working binaray can be built using
+`cmake` or `make` as usual.
+
+== Building
+
+=== Building with automake
+
+To build using `automake`, run `dev/scripts/automake/build.sh`.
+The install directory is `$WORKSPACE_ROOT/bin/games/Maelstrom/`.
+
+=== Building with cmake
+
+Works from the command line and using the Microsoft extensions from "CMake Tools".
+
+== Documentation
+
+=== Building documentaion with doxygen
+
+----
+cd $WORKSPACE_ROOT/dev/doxygen
+rm -rf docs/html docs/latex
+doxygen
+----
+
+Run `doxygen -x` to check the difference with default `Doxyfile`. 
+
+=== Building documentation with Sphinx
+
+First build the `doxygen` documentation as above, then run:
+----
+cd $WORKSPACE_ROOT/dev/sphinx
+make clean
+make html
+----
