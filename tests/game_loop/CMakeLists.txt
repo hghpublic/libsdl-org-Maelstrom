@@ -1,0 +1,3 @@
+
+add_subdirectory(test_game_loop_01)
+add_subdirectory(test_game_loop_02)
