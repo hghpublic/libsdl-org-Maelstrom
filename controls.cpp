@@ -126,9 +126,10 @@ void LoadControls(void)
 		fclose(data);
 		return;
 	}
-	fread(&gSoundLevel, sizeof(gSoundLevel), 1, data);
-	fread(&controls, sizeof(controls), 1, data);
-	fread(&gGammaCorrect, sizeof(gGammaCorrect), 1, data);
+	#define UNUSED_RESULT(X) if(X){}
+	UNUSED_RESULT(fread(&gSoundLevel, sizeof(gSoundLevel), 1, data));
+	UNUSED_RESULT(fread(&controls, sizeof(controls), 1, data));
+	UNUSED_RESULT(fread(&gGammaCorrect, sizeof(gGammaCorrect), 1, data));
 	fclose(data);
 
 	UpdateToggleFullscreenShortcut();
