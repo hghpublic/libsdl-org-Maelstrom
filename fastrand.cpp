@@ -30,10 +30,10 @@ Uint32 GetRandSeed(void)
 Uint16 FastRandom(Uint16 range)
 {
 	Uint16 result;
-	register Uint32 calc;
-	register Uint32 regD0;
-	register Uint32 regD1;
-	register Uint32 regD2;
+	/* register */ Uint32 calc;
+	/* register */ Uint32 regD0;
+	/* register */ Uint32 regD1;
+	/* register */ Uint32 regD2;
 
 #ifdef SERIOUS_DEBUG
   fprintf(stderr, "FastRandom(%hd)  Seed in: %lu ", range, randomSeed);
