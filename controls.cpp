@@ -4,6 +4,7 @@
 
 #include <string.h>
 #include <ctype.h>
+#include <iostream>
 
 #include "Maelstrom_Globals.h"
 #include "load.h"
@@ -466,14 +467,16 @@ mesg("Movie is %s...\n", gMovie ? "started" : "stopped");
 				/* Update control key status */
 				if ( key == controls.gFireControl )
 					SetControl(FIRE_KEY, 0);
-				else if ( key == controls.gTurnRControl )
+				else if ( key == controls.gTurnRControl || key == SDLK_KP_6 )
 					SetControl(RIGHT_KEY, 0);
-				else if ( key == controls.gTurnLControl )
+				else if ( key == controls.gTurnLControl || key == SDLK_KP_4 )
 					SetControl(LEFT_KEY, 0);
 				else if ( key == controls.gShieldControl )
 					SetControl(SHIELD_KEY, 0);
-				else if ( key == controls.gThrustControl )
+				else if ( key == controls.gThrustControl || key == SDLK_KP_8 )
 					SetControl(THRUST_KEY, 0);
+
+                std::cout << "Unknown key released: " << key << std::endl;
 			}
 			break;
 
