@@ -26,6 +26,7 @@ Note: Most of the info in this file came from "Inside Macintosh"
 
 #include <stdlib.h>
 #include <string.h>
+#include <cstdio>
 
 #include "SDL_types.h"
 #include "bitesex.h"
@@ -235,8 +236,10 @@ static FILE *Open_MacRes(char **original, Uint32 *resbase)
 		}
 
 #ifdef __MACOSX__
-		newname = new char[strlen(dirname)+strlen("/../Resources/")+strlen(basename)+1];
-		sprintf(newname, "%s/../Resources/%s", dirname, basename);
+        len = strlen(dirname)+strlen("/../Resources/")+strlen(basename);
+		newname = new char[len+1];
+		// sprintf(newname, "%s/../Resources/%s", dirname, basename);
+		snprintf(newname, len, "%s/../Resources/%s", dirname, basename);
 		if ( (resfile=fopen(newname, "rb")) != NULL ) {
 			break;
 		}
