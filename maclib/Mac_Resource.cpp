@@ -234,6 +234,7 @@ static FILE *Open_MacRes(char **original, Uint32 *resbase)
 		if ( (resfile=fopen(newname, "rb")) != NULL ) {
 			break;
 		}
+		delete[] newname;
 
 #ifdef __MACOSX__
         len = strlen(dirname)+strlen("/../Resources/")+strlen(basename);
