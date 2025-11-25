@@ -115,6 +115,7 @@ Sound:: Sound(const char *soundfile, Uint8 vol)
 		snd = soundres->Resource("snd ", ids[i]);
 		if ( snd == NULL ) {
 			error("%s", soundres->Error());
+			delete[] ids;
 			delete soundres;
 			return;
 		}
@@ -122,11 +123,13 @@ Sound:: Sound(const char *soundfile, Uint8 vol)
 		if ( wave->Error() ) {
 			error("%s", wave->Error());
 			delete wave;
+			delete[] ids;
 			delete soundres;
 			return;
 		}
 		Hash(ids[i], wave);
 	}
+	delete[] ids;
 	delete soundres;
 	spec = wave->Spec();
 	/* Allow ~ 1/30 second time-lag in audio buffer -- samples is x^2  */
