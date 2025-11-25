@@ -240,7 +240,7 @@ static FILE *Open_MacRes(char **original, Uint32 *resbase)
         len = strlen(dirname)+strlen("/../Resources/")+strlen(basename);
 		newname = new char[len+1];
 		// sprintf(newname, "%s/../Resources/%s", dirname, basename);
-		snprintf(newname, len, "%s/../Resources/%s", dirname, basename);
+		snprintf(newname, len+1, "%s/../Resources/%s", dirname, basename);
 		if ( (resfile=fopen(newname, "rb")) != NULL ) {
 			break;
 		}
