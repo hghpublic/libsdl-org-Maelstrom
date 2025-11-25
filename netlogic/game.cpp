@@ -864,6 +864,7 @@ static void DoGameOver(void)
 
 	screen->Fade();
 	gUpdateBuffer = true;
+	delete[] final;
 }	/* -- DoGameOver */
 
 
