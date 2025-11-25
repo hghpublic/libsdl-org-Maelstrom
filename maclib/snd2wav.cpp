@@ -80,6 +80,7 @@ int main(int argc, char *argv[])
 		sprintf(wavname, "snd_%d.wav", ids[i]);
 		wave.Save(wavname);
 	}
+	delete[] ids;
 	delete macx;
 	exit(0);
 }
