@@ -697,6 +697,8 @@ static void BuildVelocityTable(void)
 extern "C" void CleanUp(void)
 {
 	HaltLogic();
+	/* Clean up Message() static resources */
+	Message((const char *)-1);
 	if ( fontserv ) {
 		delete fontserv;
 		fontserv = NULL;

@@ -655,11 +655,26 @@ static void DrawKey(MPoint *pt, const char *key, const char *text, void (*callba
 
 void Message(const char *message)
 {
-	static MFont *font;
-	static int xOff;
-	static char *last_message;
+	static MFont *font = NULL;
+	static int xOff = 0;
+	static char *last_message = NULL;
+	static bool initialized = false;
 
-	if ( ! last_message ) { 	/* Initialize everything */
+	/* Special cleanup mode - use a magic pointer value to trigger cleanup */
+	if ( message == (const char *)-1 ) {
+		if ( font ) {
+			delete font;
+			font = NULL;
+		}
+		if ( last_message ) {
+			delete[] last_message;
+			last_message = NULL;
+		}
+		initialized = false;
+		return;
+	}
+
+	if ( ! initialized ) { 	/* Initialize everything */
 		/* This was taken from the DrawMainScreen function */
 		xOff = (SCREEN_WIDTH - 512) / 2;
 
@@ -667,9 +682,13 @@ void Message(const char *message)
 			error("Can't use New York(14) font! -- Exiting.\n");
 			exit(255);
 		}
+		initialized = true;
+		last_message = new char[1];
+		last_message[0] = '\0';
 	} else {
 		DrawText(xOff, 25, last_message, font, STYLE_BOLD, 0, 0, 0);
 		delete[] last_message;
+		last_message = NULL;
 	}
 	if ( message ) {
 		DrawText(xOff, 25, message, font, STYLE_BOLD, 0xCC,0xCC,0xCC);
