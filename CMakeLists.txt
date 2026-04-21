@@ -27,11 +27,13 @@ endif()
 
 add_subdirectory(maclib)
 
+if(false)
 set(PHYSFS_BUILD_SHARED OFF)
 set(PHYSFS_BUILD_TEST OFF)
 add_subdirectory(external/physfs EXCLUDE_FROM_ALL)
 
 add_subdirectory(external/SDL EXCLUDE_FROM_ALL)
+endif()
 
 # SDL_net's ABI has not yet been finalized
 set(original_BUILD_SHARED_LIBS "${BUILD_SHARED_LIBS}")
