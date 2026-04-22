@@ -192,7 +192,8 @@ if(NOT WIN32)
   endif()
 endif()
 
-dep_option(STEAM "Build with Steam support" ON "WIN32 OR LINUX OR MACOS" OFF)
+# dep_option(STEAM "Build with Steam support" ON "WIN32 OR LINUX OR MACOS" OFF)
+dep_option(STEAM "Build with Steam support" OFF "WIN32 OR LINUX OR MACOS" OFF)
 
 if(STEAM)
     target_compile_definitions(${TARGET_NAME} PRIVATE ENABLE_STEAM)
