@@ -1,4 +1,4 @@
-= Maelstrom 4.0
+= Maelstrom 4.0-base
 :toc:
 :sectnums:
 ifndef::env-github[:icons: font]
