@@ -1,0 +1,223 @@
+[bookmarks] Loaded 0 bookmarks
+[proc] Executing command: /usr/local/bin/cmake --version
+[proc] Executing command: /usr/local/bin/cmake -E capabilities
+[kit] Successfully loaded 3 kits from /home/vscode/.local/share/CMakeTools/cmake-tools-kits.json
+[variant] Loaded new set of variants
+[proc] Executing command: /usr/bin/aarch64-linux-gnu-gcc-14 -v
+[main] Configuring project: libsdl-org-Maelstrom 
+[proc] Executing command: /usr/local/bin/cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_TOOLCHAIN_FILE:STRING=/usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_C_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-gcc-14 -DCMAKE_CXX_COMPILER:FILEPATH=/usr/bin/aarch64-linux-gnu-g++-14 --no-warn-unused-cli -S /workspaces/libsdl-org-Maelstrom -B /workspaces/libsdl-org-Maelstrom/build -G Ninja
+[cmake] Not searching for unused variables given on the command line.
+[cmake] -- PhysicsFS will build with the following options:
+[cmake] --   ZIP support: enabled
+[cmake] --   7zip support: enabled
+[cmake] --   GRP support: enabled
+[cmake] --   WAD support: enabled
+[cmake] --   CSM support: enabled
+[cmake] --   HOG support: enabled
+[cmake] --   MVL support: enabled
+[cmake] --   QPAK support: enabled
+[cmake] --   ROFS support: enabled
+[cmake] --   SLB support: enabled
+[cmake] --   VDF support: enabled
+[cmake] --   ISO9660 support: enabled
+[cmake] --   GOB/LAB/LFD support: enabled
+[cmake] --   POD support: enabled
+[cmake] --   Build static library: enabled
+[cmake] --   Build shared library: disabled
+[cmake] --   Build stdio test program: disabled
+[cmake] --   Build Doxygen documentation: enabled
+[cmake] -- dynamic libasound -> libasound.so.2
+[cmake] -- Checking for module 'jack'
+[cmake] --   Package 'jack', required by 'virtual:world', not found
+[cmake] -- Checking for module 'libpipewire-0.3>=0.3.44'
+[cmake] --   Package 'libpipewire-0.3', required by 'virtual:world', not found
+[cmake] -- Checking for module 'libpulse>=0.9.15'
+[cmake] --   Found libpulse, version 16.1
+[cmake] -- dynamic libpulse -> libpulse.so.0
+[cmake] -- Checking for module 'sndio'
+[cmake] --   Found sndio, version 1.9.0
+[cmake] -- dynamic libsndio -> libsndio.so.7
+[cmake] -- dynamic libX11 -> libX11.so.6
+[cmake] -- dynamic libXext -> libXext.so.6
+[cmake] -- dynamic libXcursor -> libXcursor.so.1
+[cmake] -- dynamic libXi -> libXi.so.6
+[cmake] -- dynamic libXfixes -> libXfixes.so.3
+[cmake] -- dynamic libXrandr -> libXrandr.so.2
+[cmake] -- dynamic libXrender -> libXrender.so.1
+[cmake] -- dynamic libXss -> libXss.so.1
+[cmake] -- dynamic libXtst -> libXtst.so.6
+[cmake] -- Checking for module 'fribidi'
+[cmake] --   Package 'fribidi', required by 'virtual:world', not found
+[cmake] -- Checking for module 'libthai'
+[cmake] --   Package 'libthai', required by 'virtual:world', not found
+[cmake] -- Checking for module 'libdrm'
+[cmake] --   Found libdrm, version 2.4.125
+[cmake] -- Checking for module 'gbm'
+[cmake] --   Found gbm, version 25.2.8-0ubuntu0.24.04.1
+[cmake] -- dynamic libdrm -> libdrm.so.2
+[cmake] -- dynamic libgbm -> libgbm.so.1
+[cmake] -- Checking for modules 'wayland-client>=1.18;wayland-egl;wayland-cursor;egl;xkbcommon>=0.5.0'
+[cmake] --   Found wayland-client, version 1.22.0
+[cmake] --   Found wayland-egl, version 18.1.0
+[cmake] --   Found wayland-cursor, version 1.22.0
+[cmake] --   Found egl, version 1.5
+[cmake] --   Found xkbcommon, version 1.6.0
+[cmake] -- dynamic libwayland-client -> libwayland-client.so.0
+[cmake] -- dynamic libwayland-egl -> libwayland-egl.so.1
+[cmake] -- dynamic libwayland-cursor -> libwayland-cursor.so.0
+[cmake] -- dynamic libxkbcommon -> libxkbcommon.so.0
+[cmake] -- dynamic libdecor-0 -> libdecor-0.so.0
+[cmake] -- dynamic libudev -> libudev.so.1
+[cmake] -- Checking for one of the modules 'liburing-ffi'
+[cmake] -- Checking for modules 'libunwind;libunwind-generic'
+[cmake] --   Package 'libunwind', required by 'virtual:world', not found
+[cmake] --   Package 'libunwind-generic', required by 'virtual:world', not found
+[cmake] -- Checking for module 'libusb-1.0>=1.0.16'
+[cmake] --   Package 'libusb-1.0', required by 'virtual:world', not found
+[cmake] -- Could NOT find LibUSB (missing: LibUSB_LIBRARY LibUSB_INCLUDE_PATH) (found version "LibUSB_VERSION-NOTFOUND")
+[cmake] -- 
+[cmake] -- SDL3 was configured with the following options:
+[cmake] -- 
+[cmake] -- Platform: Linux-6.12.76-linuxkit
+[cmake] -- 64-bit:   TRUE
+[cmake] -- Compiler: /usr/bin/aarch64-linux-gnu-gcc-14
+[cmake] -- Revision: SDL-3.4.5-release-3.4.4-15-g61ba96db3
+[cmake] -- Vendor:   
+[cmake] -- 
+[cmake] -- Subsystems:
+[cmake] --   Audio:    ON
+[cmake] --   Video:    ON
+[cmake] --   GPU:      ON
+[cmake] --   Render:   ON
+[cmake] --   Camera:   ON
+[cmake] --   Joystick: ON
+[cmake] --   Haptic:   ON
+[cmake] --   Hidapi:   ON
+[cmake] --   Power:    ON
+[cmake] --   Sensor:   ON
+[cmake] --   Dialog:   ON
+[cmake] --   Tray:     ON
+[cmake] -- 
+[cmake] -- Options:
+[cmake] --   SDL_ALSA                    (Wanted: ON): ON
+[cmake] --   SDL_ALSA_SHARED             (Wanted: ON): ON
+[cmake] --   SDL_ALTIVEC                 (Wanted: OFF): OFF
+[cmake] --   SDL_ARMNEON                 (Wanted: ON): ON
+[cmake] --   SDL_ASAN                    (Wanted: OFF): OFF
+[cmake] --   SDL_ASSEMBLY                (Wanted: ON): ON
+[cmake] --   SDL_ASSERTIONS              (Wanted: auto): auto
+[cmake] --   SDL_AVX                     (Wanted: OFF): OFF
+[cmake] --   SDL_AVX2                    (Wanted: OFF): OFF
+[cmake] --   SDL_AVX512F                 (Wanted: OFF): OFF
+[cmake] --   SDL_BACKGROUNDING_SIGNAL    (Wanted: OFF): OFF
+[cmake] --   SDL_CCACHE                  (Wanted: OFF): OFF
+[cmake] --   SDL_CLANG_TIDY              (Wanted: OFF): OFF
+[cmake] --   SDL_CLOCK_GETTIME           (Wanted: ON): ON
+[cmake] --   SDL_COCOA                   (Wanted: OFF): OFF
+[cmake] --   SDL_DBUS                    (Wanted: ON): ON
+[cmake] --   SDL_DEPS_SHARED             (Wanted: ON): OFF
+[cmake] --   SDL_DIRECTX                 (Wanted: OFF): OFF
+[cmake] --   SDL_DISKAUDIO               (Wanted: ON): ON
+[cmake] --   SDL_DLOPEN_NOTES            (Wanted: ON): ON
+[cmake] --   SDL_DUMMYAUDIO              (Wanted: ON): ON
+[cmake] --   SDL_DUMMYCAMERA             (Wanted: ON): ON
+[cmake] --   SDL_DUMMYVIDEO              (Wanted: ON): ON
+[cmake] --   SDL_EXAMPLES                (Wanted: OFF): OFF
+[cmake] --   SDL_EXAMPLES_LINK_SHARED    (Wanted: ON): OFF
+[cmake] --   SDL_FOREGROUNDING_SIGNAL    (Wanted: OFF): OFF
+[cmake] --   SDL_FRIBIDI                 (Wanted: ON): OFF
+[cmake] --   SDL_FRIBIDI_SHARED          (Wanted: ON): OFF
+[cmake] --   SDL_GCC_ATOMICS             (Wanted: ON): ON
+[cmake] --   SDL_HIDAPI                  (Wanted: ON): ON
+[cmake] --   SDL_HIDAPI_JOYSTICK         (Wanted: ON): ON
+[cmake] --   SDL_HIDAPI_LIBUSB           (Wanted: ON): OFF
+[cmake] --   SDL_HIDAPI_LIBUSB_SHARED    (Wanted: ON): OFF
+[cmake] --   SDL_IBUS                    (Wanted: ON): ON
+[cmake] --   SDL_INSTALL                 (Wanted: OFF): OFF
+[cmake] --   SDL_INSTALL_TESTS           (Wanted: OFF): OFF
+[cmake] --   SDL_JACK                    (Wanted: ON): OFF
+[cmake] --   SDL_JACK_SHARED             (Wanted: ON): OFF
+[cmake] --   SDL_KMSDRM                  (Wanted: ON): ON
+[cmake] --   SDL_KMSDRM_SHARED           (Wanted: ON): ON
+[cmake] --   SDL_LASX                    (Wanted: OFF): OFF
+[cmake] --   SDL_LIBC                    (Wanted: ON): ON
+[cmake] --   SDL_LIBICONV                (Wanted: OFF): OFF
+[cmake] --   SDL_LIBTHAI                 (Wanted: ON): OFF
+[cmake] --   SDL_LIBTHAI_SHARED          (Wanted: ON): OFF
+[cmake] --   SDL_LIBUDEV                 (Wanted: ON): ON
+[cmake] --   SDL_LIBURING                (Wanted: ON): OFF
+[cmake] --   SDL_LSX                     (Wanted: OFF): OFF
+[cmake] --   SDL_METAL                   (Wanted: OFF): OFF
+[cmake] --   SDL_MMX                     (Wanted: OFF): OFF
+[cmake] --   SDL_OFFSCREEN               (Wanted: ON): ON
+[cmake] --   SDL_OPENGL                  (Wanted: ON): ON
+[cmake] --   SDL_OPENGLES                (Wanted: ON): ON
+[cmake] --   SDL_OPENVR                  (Wanted: OFF): OFF
+[cmake] --   SDL_OSS                     (Wanted: OFF): OFF
+[cmake] --   SDL_PIPEWIRE                (Wanted: ON): OFF
+[cmake] --   SDL_PIPEWIRE_SHARED         (Wanted: ON): OFF
+[cmake] --   SDL_PTHREADS                (Wanted: ON): ON
+[cmake] --   SDL_PTHREADS_SEM            (Wanted: ON): ON
+[cmake] --   SDL_PULSEAUDIO              (Wanted: ON): ON
+[cmake] --   SDL_PULSEAUDIO_SHARED       (Wanted: ON): ON
+[cmake] --   SDL_RENDER_D3D              (Wanted: OFF): OFF
+[cmake] --   SDL_RENDER_D3D11            (Wanted: OFF): OFF
+[cmake] --   SDL_RENDER_D3D12            (Wanted: OFF): OFF
+[cmake] --   SDL_RENDER_GPU              (Wanted: ON): ON
+[cmake] --   SDL_RENDER_METAL            (Wanted: OFF): OFF
+[cmake] --   SDL_RENDER_VULKAN           (Wanted: ON): ON
+[cmake] --   SDL_ROCKCHIP                (Wanted: ON): OFF
+[cmake] --   SDL_RPATH                   (Wanted: ON): ON
+[cmake] --   SDL_RPI                     (Wanted: ON): OFF
+[cmake] --   SDL_SNDIO                   (Wanted: ON): ON
+[cmake] --   SDL_SNDIO_SHARED            (Wanted: ON): ON
+[cmake] --   SDL_SSE                     (Wanted: OFF): OFF
+[cmake] --   SDL_SSE2                    (Wanted: OFF): OFF
+[cmake] --   SDL_SSE3                    (Wanted: OFF): OFF
+[cmake] --   SDL_SSE4_1                  (Wanted: OFF): OFF
+[cmake] --   SDL_SSE4_2                  (Wanted: OFF): OFF
+[cmake] --   SDL_SYSTEM_ICONV            (Wanted: ON): ON
+[cmake] --   SDL_TESTS                   (Wanted: OFF): OFF
+[cmake] --   SDL_TESTS_LINK_SHARED       (Wanted: ON): OFF
+[cmake] --   SDL_UNINSTALL               (Wanted: OFF): OFF
+[cmake] --   SDL_VIRTUAL_JOYSTICK        (Wanted: ON): ON
+[cmake] --   SDL_VIVANTE                 (Wanted: OFF): OFF
+[cmake] --   SDL_VULKAN                  (Wanted: ON): ON
+[cmake] --   SDL_WASAPI                  (Wanted: OFF): OFF
+[cmake] --   SDL_WAYLAND                 (Wanted: ON): ON
+[cmake] --   SDL_WAYLAND_LIBDECOR        (Wanted: ON): ON
+[cmake] --   SDL_WAYLAND_LIBDECOR_SHARED (Wanted: ON): ON
+[cmake] --   SDL_WAYLAND_SHARED          (Wanted: ON): ON
+[cmake] --   SDL_X11                     (Wanted: ON): ON
+[cmake] --   SDL_X11_SHARED              (Wanted: ON): ON
+[cmake] --   SDL_X11_XCURSOR             (Wanted: ON): ON
+[cmake] --   SDL_X11_XDBE                (Wanted: ON): ON
+[cmake] --   SDL_X11_XFIXES              (Wanted: ON): ON
+[cmake] --   SDL_X11_XINPUT              (Wanted: ON): ON
+[cmake] --   SDL_X11_XRANDR              (Wanted: ON): ON
+[cmake] --   SDL_X11_XSCRNSAVER          (Wanted: ON): ON
+[cmake] --   SDL_X11_XSHAPE              (Wanted: ON): ON
+[cmake] --   SDL_X11_XSYNC               (Wanted: ON): ON
+[cmake] --   SDL_X11_XTEST               (Wanted: ON): ON
+[cmake] --   SDL_XINPUT                  (Wanted: OFF): OFF
+[cmake] -- 
+[cmake] --  Build Shared Library: ON
+[cmake] --  Build Static Library: OFF
+[cmake] -- 
+[cmake] -- Enabled backends:
+[cmake] --   Video drivers: dummy kmsdrm(dynamic) offscreen wayland(dynamic) x11(dynamic)
+[cmake] --   X11 libraries: xcursor xdbe xfixes xinput2 xrandr xscrnsaver xshape xsync xtest
+[cmake] --   Render drivers: gpu ogl ogl_es2 vulkan
+[cmake] --   GPU drivers: vulkan
+[cmake] --   Audio drivers: alsa(dynamic) disk dummy pulseaudio(dynamic) sndio(dynamic)
+[cmake] --   Joystick drivers: hidapi linux virtual
+[cmake] --   Camera drivers: dummy v4l2
+[cmake] -- 
+[cmake] -- If something was not detected, although the libraries
+[cmake] -- were installed, then make sure you have set the
+[cmake] -- CMAKE_C_FLAGS and CMAKE_PREFIX_PATH CMake variables correctly.
+[cmake] -- 
+[cmake] -- Configuring SDL3_net 3.0.0
+[cmake] -- Configuring done (0.5s)
+[cmake] -- Generating done (0.2s)
+[cmake] -- Build files have been written to: /workspaces/libsdl-org-Maelstrom/build
